@@ -1,6 +1,6 @@
 ---
 title: Product discovery log — agent memory products
-date: 2026-07-13
+date: 2026-06-24
 status: working-log
 language: zh-CN
 ---
@@ -9,7 +9,6 @@ language: zh-CN
 
 本日志记录 2026-06-11 与 2026-06-24 的多子 agent 产品搜索、证据审查和最终入库决定。它不是
 产品介绍页,而是解释**为什么某个候选被深度入库、只进入轻量索引、或被拒绝**。
-2026-07-07 增量记录补充 Tree Ring Memory。
 
 ## 1. 执行模型
 
@@ -59,7 +58,6 @@ language: zh-CN
 | PowerMem | https://github.com/oceanbase/powermem | https://www.powermem.ai/ | memory API/plugin | repo + site | Tier A | Experience + Skill distillation, hybrid retrieval, MCP/HTTP/CLI/plugins | benchmark self-reported | OSS, domestic |
 | Alibaba Bailian Memory Library | https://help.aliyun.com/zh/model-studio/memory-library | https://help.aliyun.com/en/document_detail/3033860.html | platform-managed memory | official docs | Tier A | automatic extraction, memory fragments, user profile, Add/Search APIs;AgentLoop memory policies(Facts/Episodic/Summary/Custom) | cloud black box;AgentLoop split/merge needs later review | Domestic, personal/platform |
 | Basic Memory | https://docs.basicmemory.com/ | https://github.com/basicmachines-co/basic-memory | local-first memory | docs + repo | Tier A | Markdown source of truth, knowledge graph, MCP-native, cloud/local | PKM crossover and AGPL | MCP, OSS |
-| Tree Ring Memory | https://github.com/TerminallyLazy/Tree-Ring-Memory | https://terminallylazy.github.io/Tree-Ring-Memory/press-kit.md | local-first coding-agent memory | official repo + press kit + GitHub API spot-check | Tier A | Rust CLI + SQLite/FTS, explicit recall/forget/audit/consolidation, DOX/Revolve adapters, agent bridge guidance | protocol-preview;no independent benchmark;not MCP server yet | OSS, GitHub |
 | ByteRover (Cipher) | https://www.byterover.dev/ | https://github.com/campfirein/byterover-cli | coding-agent memory | site + repo + docs | Tier A | portable memory layer for autonomous coding agents, CLI/MCP/context tree | ELv2/source-available; maturity needs follow-up | MCP, OSS |
 | Honcho | https://github.com/plastic-labs/honcho | https://docs.honcho.dev/ | memory infrastructure | repo + docs | Tier A | peer-centric memory, async reasoning, representations, MCP/SDK/self-host | eval claims vendor-side, AGPL | OSS, MCP |
 | agentmemory | https://github.com/rohitg00/agentmemory | https://agent-memory.dev | coding-agent memory | repo + GitHub API spot-check | Tier A | persistent memory for Claude Code/Codex/Cursor/OpenClaw/MCP; Apache-2.0; active 2026-06 | benchmark claims need independent review | OSS, GitHub |
@@ -131,7 +129,6 @@ language: zh-CN
 | PowerMem | [`../products/powermem.md`](../products/powermem.md) | [`../products/archives/powermem-overview.md`](../products/archives/powermem-overview.md) | repo + site; benchmark claims labeled |
 | Alibaba Bailian Memory | [`../products/alibaba-bailian-memory.md`](../products/alibaba-bailian-memory.md) | [`../products/archives/alibaba-bailian-memory-overview.md`](../products/archives/alibaba-bailian-memory-overview.md) | official Aliyun docs |
 | Basic Memory | [`../products/basic-memory.md`](../products/basic-memory.md) | [`../products/archives/basic-memory-overview.md`](../products/archives/basic-memory-overview.md) | docs + repo; AGPL/local-first |
-| Tree Ring Memory | [`../products/tree-ring-memory.md`](../products/tree-ring-memory.md) | [`../products/archives/tree-ring-memory-overview.md`](../products/archives/tree-ring-memory-overview.md) | official repo + press kit; protocol-preview; no benchmark claims |
 | ByteRover | [`../products/byterover.md`](../products/byterover.md) | [`../products/archives/byterover-overview.md`](../products/archives/byterover-overview.md) | site + repo/docs; alias Cipher |
 | Honcho | [`../products/honcho.md`](../products/honcho.md) | [`../products/archives/honcho-overview.md`](../products/archives/honcho-overview.md) | repo + docs; vendor eval claims labeled |
 | agentmemory | [`../products/agentmemory.md`](../products/agentmemory.md) | [`../products/archives/agentmemory-overview.md`](../products/archives/agentmemory-overview.md) | GitHub repo/API; benchmark claims not independently verified |
@@ -160,13 +157,12 @@ language: zh-CN
 | update-existing | Redis Agent Memory Server | Redis blog 2026-07-01 | 更新 `products/redis-agent-memory-server.md`;作为产品定位/实现建议,非 benchmark |
 | watchlist | Cloudflare Think harness | Cloudflare docs | 暂不拆产品;与 Cloudflare Agent Memory 有重叠,先观察是否形成独立 memory product |
 
-## 11. 2026-07-13 weekly refresh delta
+## 11. 2026-07-20 weekly refresh delta
 
 | Decision | Item | Source | Action |
 |---|---|---|---|
-| update-existing | Google Agent Platform Memory Bank | Gemini Enterprise Agent Platform release notes 2026-07-08 | 更新 `products/google-memory-bank.md`;IngestEvents GA 和 Gemini Embedding 2 support 是 managed memory ingestion / retrieval 产品行为证据,不是独立质量结论 |
-| update-existing | Oracle AI Agent Memory | Oracle developer/database blogs 2026-07-07 / 2026-07-10 | 更新 `products/oracle-ai-agent-memory.md`;26.6 hybrid search、context cards、TTL、metadata filters、update APIs 是 vendor product behavior;性能评测表述本轮不入 claims ledger |
-| update-existing | Zep | Zep ABAC blog 2026-07-09 | 更新 `products/zep.md`;API-key action policies and metadata-scoped graph access 是 governance surface,不是 quality claim |
-| update-existing | TencentDB Agent Memory | Tencent Cloud billing docs 2026-07-07 | 更新 `products/tencentdb-agent-memory.md`;商业计费和白名单免费期是 productization/procurement signal |
-| update-existing | Alibaba Bailian Memory Library | Alibaba Cloud long-term memory API reference | 更新 `products/alibaba-bailian-memory.md`;Add/Search/List/Delete/Update/Profile APIs 是 official API surface,但页面日期不可稳定确认 |
-| watchlist | Anthropic API memory-store beta header | Claude API release notes surfaced a dated-after-run memory-store change | 当前 run date 为 2026-07-13;不收录 2026-07-22 future-dated release-note item,下周复核 |
+| update-existing | Google Agent Platform Memory Bank | Gemini Enterprise Agent Platform release notes 2026-07-15 | 更新 `products/google-memory-bank.md`;memory profiles 与 IngestEvents GA 是托管产品行为证据 |
+| update-existing | Oracle AI Agent Memory | Oracle 26.6 docs / product page | 更新 `products/oracle-ai-agent-memory.md`;hybrid search、CRUD/cascade delete、retention policy、context cards、async APIs 和 custom extraction 是产品行为证据 |
+| update-existing | OpenAI ChatGPT Memory | current ChatGPT release notes / Help Center recheck | 更新 `products/openai-memory.md`;summary 删除、关闭、文本框编辑和高亮纠错属于 UX/governance 信号 |
+| update-existing | AWS Bedrock AgentCore Memory | current AgentCore release notes recheck | 更新 `products/aws-agentcore-memory.md`;Harness built-in/BYO memory surface 为再确认,未发现 post-window memory delta |
+| watchlist | Speculate with Memory | arXiv 2607.12236 | memory-augmented speculation 先保留为 cost/latency adjacent,不作为核心 memory 产品或 benchmark |

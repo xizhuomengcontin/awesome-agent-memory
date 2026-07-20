@@ -11,7 +11,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-07-13
+last_revised: 2026-07-20
 archive: archives/oracle-ai-agent-memory-overview.md
 ---
 
@@ -45,16 +45,13 @@ memory(`add` / `search` workflows),用于保存用户偏好、规则和跨会话
 
 ## 3.2 2026-07 refresh
 
-Oracle 2026-07-07 developer blog 将 26.6 更新描述为更面向开发者控制面的版本:
-background extraction、hybrid vector + text search、custom extraction
-instructions、context cards、metadata filtering、update APIs、TTL、OracleDBEmbedder
-和 chunked semantic indexing。2026-07-10 database blog 进一步把 26.6 定位为
-"memory with receipts"。
-
-这些更新强化了 Oracle 路线的核心特征:memory 不是独立黑箱服务,而是数据库内的
-可过滤、可更新、可保留期限管理的 enterprise substrate。本轮只收录产品行为和
-治理面变化;博客中的性能评测表述不进入 benchmark claims ledger,后续若要使用需先
-按 claims ledger 规范单独归档。
+2026-07-20 复核时,Oracle 26.6 文档和官方产品页可访问。官方资料继续把
+AI Agent Memory 定位为 Oracle AI Database 上的 enterprise persistent memory
+layer,并新增/强调 hybrid vector + keyword search、`add`/`search`/`delete`/`update`
+workflow、record cascade delete、schema-level retention policy、chunked indexing、
+background/inline extraction、thread context cards、async APIs、metadata filtering
+以及 custom extraction function。它们是 Oracle 产品行为和架构证据,不支持独立
+benchmark superiority claim。
 
 ## 4. 决策相关性 / Decision relevance
 
@@ -78,10 +75,11 @@ instructions、context cards、metadata filtering、update APIs、TTL、OracleDB
 ## 7. 进一步阅读
 
 - archive: [`archives/oracle-ai-agent-memory-overview.md`](archives/oracle-ai-agent-memory-overview.md)
-- Docs:https://docs.oracle.com/en/database/oracle/agent-memory/26.4/agmea/about.html
-- Docs index:https://docs.oracle.com/en/database/oracle/agent-memory/26.4/agmea/index.html
-- 26.6 developer blog:https://blogs.oracle.com/developers/whats-new-in-oracle-ai-agent-memory-custom-extraction-hybrid-search-and-more-control
-- 26.6 database blog:https://blogs.oracle.com/database/oracle-ai-agent-memory-26-6
+- Docs 26.4:https://docs.oracle.com/en/database/oracle/agent-memory/26.4/agmea/about.html
+- Docs 26.6 index:https://docs.oracle.com/en/database/oracle/agent-memory/26.6/index.html
+- What's new 26.6:https://docs.oracle.com/en/database/oracle/agent-memory/26.6/guide/whats-new.html
+- API reference:https://docs.oracle.com/en/database/oracle/agent-memory/26.6/guide/api/agentmemory.html
+- Product page:https://www.oracle.com/database/ai-agent-memory/
 
 ---
 
