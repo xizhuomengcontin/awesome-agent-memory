@@ -10,7 +10,7 @@ memory_modules:
   - ingest-adapter
   - retriever-reranker
 status: full
-last_revised: 2026-07-20
+last_revised: 2026-07-27
 archive: archives/openai-memory-overview.md
 ---
 
@@ -36,9 +36,8 @@ Memory 中查看 / 编辑 / 删除任意一条,或整体关闭;"Temporary Chat" 
 "long-term memory layer",更像 stateful conversation store;跨 thread 的
 语义记忆需要开发者自己在 vector store + retrieval 上搭。
 
-> 注:OpenAI 帮助中心对 shell `curl` 抓取有 403 访问限制;2026-07-20 browser
-> fetch 可访问当前 ChatGPT release notes。platform docs 仍可能随登录/网络策略变化。
-> 详见 archive 文件中的限制说明。
+> 注:本次抓取时 OpenAI 帮助中心与 platform docs 均返回 403,以上为公开
+> 信息梳理。详见 archive 文件中的限制说明。
 
 ## 3. 关键技术选择
 
@@ -66,11 +65,12 @@ vendor-managed memory 的 UX/治理升级,不是新的开放 memory kernel。
 memory 不受该 ChatGPT 产品 memory 变更影响。该更新继续归类为 vendor-managed
 product behavior,不作为开放 agent-memory API 或独立质量证据。
 
-2026-07-20 复核时,当前 ChatGPT release notes / Help Center 继续暴露 memory
-summary 的用户控制面:用户可从 summary 页面删除显示的 memories,也可用 "Delete
-and turn off memory" 关闭 memory;summary 支持文本框编辑和高亮纠错,但关闭 memory
-不会删除既有历史聊天。该更新只按当前官方帮助中心产品行为记录,不代表底层 schema、
-检索或 consolidation 机制公开。
+2026-07 复核的 ChatGPT Projects help page 说明 Projects have built-in memory。
+Project memory 可设为 project-only 或 default;shared projects 会自动变成
+project-only,且不能恢复为 default。Project-only memory 限制 chats 只引用同一
+project 内的 conversations,不能访问其他 projects 或普通 ChatGPT context。帮助页
+还说明 project memory 不提供像 personal saved memories 那样的条目列表。该能力
+是 ChatGPT 产品侧 scope/control 信号,不是开放 agent memory API。
 
 ## 4. 决策相关性 / Decision relevance
 
@@ -103,8 +103,8 @@ and turn off memory" 关闭 memory;summary 支持文本框编辑和高亮纠错,
 - **不透明**:写入策略、保留时长、整理逻辑均未公开,出问题难调试
 - **行为变更风险**:产品 / 政策迭代会改变默认行为(2024 → 2025 已经发生
   过一次扩展),依赖方需要持续跟踪
-- **抓取限制**:OpenAI 帮助中心对 shell `curl` 可能返回 403;本轮用 browser fetch
-  复核 release notes,但事实仍需要以官方页面为准
+- **抓取限制**:OpenAI 帮助中心 / platform docs 在本次抓取返回 403,以上
+  事实需要以官方页面为准
 
 ## 7. 进一步阅读
 

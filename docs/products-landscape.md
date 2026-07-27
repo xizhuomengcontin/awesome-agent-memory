@@ -123,6 +123,7 @@ language: zh-CN
 | Cloudflare Agent Memory | [`../products/cloudflare-agent-memory.md`](../products/cloudflare-agent-memory.md) | Big-tech-builtin / Private beta | Cloudflare Agents 用户 |
 | Oracle AI Agent Memory | [`../products/oracle-ai-agent-memory.md`](../products/oracle-ai-agent-memory.md) | Enterprise platform | Oracle AI Database 客户 |
 | Alibaba Cloud Bailian Memory Library | [`../products/alibaba-bailian-memory.md`](../products/alibaba-bailian-memory.md) | Cloud platform | 百炼 / Model Studio 开发者 |
+| Databricks Managed Agent Memory | [`../products/databricks-managed-agent-memory.md`](../products/databricks-managed-agent-memory.md) | Cloud platform / Beta | Azure Databricks / Unity Catalog agent builder |
 
 2026-07-13 refresh note:Google Memory Bank 的 2026-07-08 release notes 把
 `IngestEvents` 标为 GA,并加入 Gemini Embedding 2 similarity-search configuration。
@@ -212,6 +213,7 @@ ledger 规范归档。
 | Cloudflare Agent Memory | SaaS / Private beta | Cloudflare Workers/Agents 客户 |
 | Oracle AI Agent Memory | Enterprise platform | Oracle AI Database 客户 |
 | Alibaba Bailian Memory Library | SaaS | 阿里云百炼客户 |
+| Databricks Managed Agent Memory | SaaS / Beta | Azure Databricks / Unity Catalog 客户 |
 | Redis Agent Memory Server | OSS / self-host | Redis 用户 / 企业平台团队 |
 
 ### A9. DB / Vector store 衍生的 memory API
@@ -251,7 +253,7 @@ Cognition Devin / Sierra / Decagon / Supermemory Enterprise /
 Tencent Cloud Agent Memory / AWS Bedrock AgentCore Memory /
 Google Agent Platform Memory Bank / Microsoft Foundry Agent Service Memory /
 Cloudflare Agent Memory / Oracle AI Agent Memory / Alibaba Bailian Memory /
-Personal AI Memory Core。
+Databricks Managed Agent Memory / Personal AI Memory Core。
 
 ### B4. C 端最终用户
 ChatGPT memory / Claude memory / Gemini personal context /

@@ -5,55 +5,49 @@ source: arXiv:2607.08716
 date: 2026-07
 domain: memory
 core_claim: |
-  A separate memory agent can update a structured memory bank and selectively
-  inject memory-grounded reminders into long-horizon agents when state would
-  otherwise decay from the working context.
+  A sidecar memory agent can reduce behavioral state decay by deciding when to
+  inject memory-grounded reminders into a long-horizon action agent.
 evidence_level: medium
 code_available: check
 license: check
 memory_modules:
-  - dream-consolidator
   - retriever-reranker
+  - context-packer
   - evaluator-benchmark
 status: seed
-last_revised: 2026-07-13
+last_revised: 2026-07-27
 urls:
   - https://arxiv.org/abs/2607.08716
 ---
 
-# Remember When It Matters(arXiv 2607.08716)
+# Proactive Memory Agent(arXiv 2607.08716)
 
 ## Problem statement
 
-In long-horizon tasks, requirements, diagnoses, prior attempts, environment
-facts, and open subgoals can be buried in an expanding trajectory. The paper
-calls this behavioral state decay and treats memory as an active intervention
-mechanism rather than passive retrieval.
+In long-horizon tasks, relevant state can decay from the action agent's working
+context even when it exists somewhere in the trajectory. Passive retrieval or
+always-on memory injection can both be wasteful or distracting.
 
 ## Core claim
 
-The proposed memory agent runs beside an unmodified action agent. It updates a
-structured memory bank from recent trajectory evidence and decides whether to
-inject a memory-grounded reminder or stay silent. The paper reports results on
-Terminal-Bench 2.0 and tau2-Bench and explores open-weight memory policies.
-
-Reported pass@1 gains are paper-origin claims. This seed note records the
-selective-intervention design, not an independent benchmark result.
+The paper adds a separate memory agent that updates a structured memory bank and
+chooses whether to inject a reminder or stay silent. It reports improvements on
+Terminal-Bench 2.0 and tau2-Bench, plus early policy training on SETA. These are
+paper-origin claims.
 
 ## Decision relevance
 
-- `dream-consolidator`:memory updates can happen as a sidecar process over the
-  recent trajectory rather than inside the action agent.
-- `retriever-reranker`:retrieval may need a silence option; always injecting
-  memory can be worse than selective intervention.
-- `evaluator-benchmark`:long-horizon agent tasks should measure whether memory
-  affects decisions at the point it matters.
+- `retriever-reranker`:recall should include a no-inject decision, not only rank
+  retrieved records.
+- `context-packer`:memory context should be intervention-aware and budget-aware.
+- `evaluator-benchmark`:agent-memory evals should measure action outcomes and
+  distraction costs, not only recall accuracy.
 
 ## Caveats
 
-This local note is seed quality. A full read should verify the memory bank
-schema, intervention policy labels, benchmark harness details, and whether gains
-come from memory timing rather than extra advisor compute.
+This is a seed note. Full read should verify whether the benchmarks isolate
+memory benefit from advisor behavior, the shape of SETA, and implementation
+availability.
 
 ## Sources
 
@@ -61,5 +55,5 @@ come from memory timing rather than extra advisor compute.
 
 ---
 
-> *Ymem project-specific decision relevance is mapped in
-> [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md).*
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md)。*
