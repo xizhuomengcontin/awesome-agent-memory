@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-07-27
+last_revised: 2026-08-03
 archive: archives/google-memory-bank-overview.md
 ---
 
@@ -55,12 +55,13 @@ generation 的默认模型从 Gemini 2.5 Flash 改为 Gemini 3.5 Flash。该更�
 memory extraction / generation 仍会随平台模型配置变化;它是产品行为证据,不代表
 memory ranking 机制或质量有独立复现。
 
-2026-07-08 release notes 又把 Memory Bank `IngestEvents` API 标为 GA,并补充
-generation windows overlap、memory revisions、structured metadata 与 metadata
-merge strategy。2026-07-15 release notes 将 Memory Bank memory profiles 标为 GA:
-固定 schema 的 structured profiles 由 LLM 填充和更新,用于低延迟读取 evolving
-information。这些更新加强的是 Google managed memory 的 schema / ingest / profile
-治理面,仍是 vendor product behavior,不代表独立 benchmark 证据。
+## 3.3 2026-08 refresh
+
+2026-08-03 周更复核官方 setup / integration docs 时,Memory Bank 继续作为
+Gemini Enterprise Agent Platform 的 managed memory instance 暴露。文档强调可用
+topics、TTL 等 custom configurations,并可与 Agent Runtime 集成 read / write
+memory。该更新只支持"Memory Bank 提供可配置托管 memory 与 runtime 集成"这一
+产品行为判断,不支持独立质量或 benchmark 结论。
 
 ## 4. 决策相关性 / Decision relevance
 

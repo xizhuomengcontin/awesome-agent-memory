@@ -19,35 +19,23 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
-## 2026-07-27 manual radar additions
+## 2026-08 manual radar additions
 
-These entries were added by the 2026-07-27 weekly radar refresh. They are not
+These entries were added by the 2026-08-03 weekly radar refresh. They are not
 part of the 2026-05-19 nine-list scrape statistics above.
 
-- [Retain or Consolidate? Budget-Dependent Operator Selection for Language Agent Memory](retain-or-consolidate-budget-dependent-memory.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.17545)
-- [Mechanistic Attention Guidance for Agent Memory Refinement](mechanistic-attention-guidance-agent-memory-refinement.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.17621)
-- [AttriMem: Attribution-Guided Process Feedback for Agent Memory Learning](attrimem-attribution-guided-memory-learning.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.21106)
-- [Beyond Memory Leaderboards: Evaluating Scientific Memory as Budgeted Context Restoration](beyond-memory-leaderboards-budgeted-context-restoration.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.16848)
-- [Your Agent's Memories Are Not Its Own: Forged Reasoning Attacks on LLM Agent Memory and Defenses](forged-reasoning-attacks-agent-memory.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.05029)
-- [From Memory to Skills: Evidence-Grounded Co-Evolution Governance for Long-Horizon LLM Agents](from-memory-to-skills.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.16621)
-- [MemTools: A Unified Research Framework for Interoperable Agent Memory](memtools-interoperable-agent-memory-framework.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.21404)
-- [Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents](proactive-memory-agent.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.08716)
-- [OCR-Memory: Optical Context Retrieval for Long-Horizon Agent Memory](ocr-memory.md) — ACL 2026 — seed — [acl](https://aclanthology.org/2026.acl-long.474/)
-- [Profile-Graph Memory for LLM Agents / MemHop](profile-graph-memory-memhop.md) — 2026-06 page dateline; first seen 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.19359)
-- [MOSAIC: Accurate and Efficient Long-Term Memory for LLM Agents](mosaic-long-term-memory.md) — 2026-05 page dateline; first seen 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.16211)
+- [Zero-Mem: Zero-Token Memory Operations for LLM Agents](zero-mem-zero-token-memory-operations.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.29377)
+- [Memory Provenance Laundering in LLM Agents](memory-provenance-laundering.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.29167)
+- [MemHarness: Memory Is Reconstructed, Not Replayed](memharness-memory-reconstructed-not-replayed.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.28272)
+- [Filesystem-Based Memory for LLM Agents](filesystem-based-memory-llm-agents.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.26637)
+- [MemSecBench: Tracking Agent Memory Poisoning](../benchmarks/memsecbench.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.27080)
+- [Setoka: Hierarchical User Understanding in Personalized Agents](../benchmarks/setoka.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.27056)
 
-## 2026-07-06 manual radar additions
+## 2026-07 manual radar additions
 
-These entries were added by the 2026-07 weekly radar refreshes. They are not
+These entries were added by the 2026-07-06 weekly radar refresh. They are not
 part of the 2026-05-19 nine-list scrape statistics above.
 
-- [PM-Bench: Evaluating Prospective Memory in LLM Agents](../benchmarks/pm-bench.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.12385)
-- [Memory as a Controlled Process: Learned Adaptive Memory Management for LLM Agents](memory-as-controlled-process.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.13591)
-- [Experience Memory Graph: One-Shot Error Correction for Agents](experience-memory-graph.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.13884)
-- [MemOps: Memory Operations Benchmark for Memory-Augmented Agents](../benchmarks/memops.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.12893)
-- [Bad Memory: Benchmarking and Mitigating Persistent Memory Prompt Injection Attacks](../benchmarks/bad-memory-prompt-injection.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.14611)
-- [Why Git: Git as Agentic Memory Layer](git-bound-agent-memory.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.14390)
-- [MemPoison: Uncovering Persistent Memory Threats and Structural Blind Spots in LLM Agents](../benchmarks/mempoison.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.14651)
 - [A-TMA: Decoupling State-Aware Memory Failures in Long-Term Agent Memory](atma-state-aware-memory-failures.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.01935)
 - [MemSyco-Bench: Benchmarking Sycophancy in Agent Memory](../benchmarks/memsyco-bench.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.01071)
 - [MemLeak: Diagnosing Information Leaks in Multimodal Agent Memory](../benchmarks/memleak.md) — 2026-06 — benchmark seed — [arxiv](https://arxiv.org/abs/2606.29788)

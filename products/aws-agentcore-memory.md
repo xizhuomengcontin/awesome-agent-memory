@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-07-27
+last_revised: 2026-08-03
 archive: archives/aws-agentcore-memory-overview.md
 ---
 
@@ -58,11 +58,12 @@ record streaming 作为当前能力面:memory record create / update / delete �
 Kinesis,用于下游审计、同步或增量处理。该能力是产品行为证据,可支持"AgentCore Memory
 暴露 evented memory lifecycle"这一判断,但不支持任何独立性能结论。
 
-2026-07 下旬 release notes 将 AgentCore Harness GA 描述为 built-in memory by
-default 或 bring-your-own memory,同时 AgentCore managed policy 文档新增
-`AmazonBedrockAgentCoreMemoryBedrockModelInferenceExecutionRolePolicy`,说明
-AgentCore Memory 调用 Bedrock 和 Bedrock Mantle 模型以处理 memories。该更新是
-权限 / runtime 集成信号,不是 memory algorithm 或质量证据。
+## 3.3 2026-08 refresh
+
+2026-08-03 周更复核时,AWS Bedrock Agents Classic maintenance-mode docs 建议新建或
+迁移工作负载使用 AgentCore,而 AgentCore release notes / developer guide 继续把
+memory 作为 agent runtime 的内建或 BYO 能力面。该信号支持"AgentCore Memory 是 AWS
+agent runtime 迁移路径的一部分"这一产品行为判断,不支持性能或质量结论。
 
 ## 4. 决策相关性 / Decision relevance
 
@@ -93,6 +94,7 @@ AgentCore Memory 调用 Bedrock 和 Bedrock Mantle 模型以处理 memories。�
 - Metadata:https://aws.amazon.com/about-aws/whats-new/2026/05/agentcore-longterm-memory-metadata/
 - Harness GA:https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-is-now-generally-available-go-from-idea-to-production-grade-agent-in-minutes/
 - Release notes:https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html
+- Bedrock Agents Classic maintenance mode:https://docs.aws.amazon.com/bedrock/latest/userguide/agents-classic-maintenance-mode.html
 
 ---
 
