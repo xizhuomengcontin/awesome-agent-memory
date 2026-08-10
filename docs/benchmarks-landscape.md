@@ -35,8 +35,9 @@ language: zh-CN
 | memory-induced sycophancy | [`MemSyco-Bench`](../benchmarks/memsyco-bench.md) | whether retrieved memory should influence factual reasoning, conflicts, updates, and personalization | seed,origin paper logged; results/resources not normalized |
 | multimodal deletion leakage | [`MemLeak`](../benchmarks/memleak.md) | residual recovery after deletion via correlated text and retained images | seed,origin paper logged; image/data/setup not normalized |
 | baseline-control methodology | [`MemDelta`](../benchmarks/memdelta.md) | component-controlled memory-vs-RAG/full-context evaluation and write-path cost discipline | seed,methodology event logged; not an end-agent leaderboard |
-| memory poisoning lifecycle | [`MemSecBench`](../benchmarks/memsecbench.md) | persistence, downstream consequence, and selective repair of malicious memory semantics | seed,origin paper logged; attack/backend/repair setup not normalized |
-| hierarchical user understanding | [`Setoka`](../benchmarks/setoka.md) | explicit facts plus abstract personal characteristics over heterogeneous user data | seed,origin paper logged; data/privacy/task setup not normalized |
+| memory-strategy comparison | [`AgentMemBench`](../benchmarks/agentmembench.md) | quality / footprint / latency comparison across memory management strategies | seed,origin paper logged; artifact/license review pending |
+| event-grounded personalization | [`FinPerMA`](../benchmarks/finperma.md) | longitudinal personalized memory under material preference shocks | seed,origin paper logged; domain assumptions and artifact release pending |
+| consolidation authority | [`AuthMem-Bench`](../benchmarks/authmem-bench.md) | whether consolidation preserves source authority and prevents unauthorized reuse | seed,origin paper logged; authority taxonomy and released artifacts pending |
 
 ## B. 初始交叉统计
 
@@ -63,8 +64,9 @@ language: zh-CN
 | MemSyco-Bench | 1 | origin paper logged; memory-induced sycophancy protocol not yet normalized |
 | MemLeak | 1 | origin paper logged; multimodal deletion-leakage protocol not yet normalized |
 | MemDelta | 1 | methodology event logged; use for claims discipline, not direct benchmark ranking |
-| MemSecBench | 1 | origin paper logged; poisoning persistence/consequence/repair protocol not yet normalized |
-| Setoka | 1 | origin paper logged; hierarchical personalization protocol not yet normalized |
+| AgentMemBench | 1 | origin paper logged; strategy-level memory management protocol not yet normalized |
+| FinPerMA | 1 | origin paper logged; personalized event-shock protocol not yet normalized |
+| AuthMem-Bench | 1 | origin paper logged; source-authority protocol not yet normalized |
 
 ### B2. Evaluation uses / baseline comparisons
 
@@ -110,8 +112,6 @@ language: zh-CN
 | MemoryAgentBench | 1 | Survey mention only |
 | DynamicMem | 0 | Origin protocol only |
 | MEMPROBE | 0 | Origin protocol only |
-| MemSecBench | 0 | Origin protocol only |
-| Setoka | 0 | Origin protocol only |
 
 ### B7. Independent or methodological pressure
 
@@ -166,11 +166,13 @@ enters the catalog.
    becomes a kernel evaluation priority.
 9. Upgrade GateMem if shared-memory governance or enterprise scoped recall becomes
    a kernel priority.
-10. Upgrade MemSecBench if persistent memory poisoning repair becomes a kernel
-    security priority.
-11. Upgrade Setoka if hierarchical user understanding becomes a personalization
-    benchmark priority.
-12. Add independent reproduction rows only when the source gives enough setup
+10. Upgrade AuthMem-Bench if source authority and provenance controls become a
+    governance priority.
+11. Upgrade FinPerMA if event-driven personalization becomes a product or kernel
+    evaluation priority.
+12. Upgrade AgentMemBench if strategy-level quality / footprint / latency
+    comparisons become an implementation priority.
+13. Add independent reproduction rows only when the source gives enough setup
    detail to distinguish reruns from marketing summaries.
 
 ## F. Maintenance Contract

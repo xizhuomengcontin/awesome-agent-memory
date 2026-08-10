@@ -1,28 +1,28 @@
 ---
 title: 2026-08 Memory Radar refresh
-date: 2026-08-03
+date: 2026-08-10
 status: current-source-refresh
 language: zh-CN
 ---
 
 # 2026-08 Memory Radar refresh
 
-本页记录 2026-08-03 的 weekly radar refresh。主 agent 从最新 `origin/main`
-创建 `codex/weekly-memory-radar-2026-08-03`,并用 paper/product/GitHub discovery
+本页记录 2026-08-10 的 weekly radar refresh。主 agent 从最新 `origin/main`
+创建 `codex/weekly-memory-radar-2026-08-10`,并用 paper/product/GitHub discovery
 子 agent 做候选检索。所有 GitHub/list/catalog 信号只作为 discovery;最终收录只依赖
 primary paper/product sources。
 
-注意:2026-07-27 周更 PR `#18` 仍未合并到 `origin/main`,其中 Databricks Managed
-Agent Memory、Memora 和多条 7 月论文 seed 已在开 PR 中。本轮不重复这些 PR `#18`
-条目,只记录相对当前 `origin/main` 的新候选和官方产品行为更新。
+本轮开始时 PR #16-#19 仍 open,其中 PR #19 已覆盖 2026-08-03 的 Zero-Mem、
+Memory Provenance Laundering、MemHarness、Filesystem-Based Memory、MemSecBench、
+Setoka 和若干产品更新。因此本轮只收录未被这些 open PR 明确覆盖的新证据。
 
 ## 执行模型
 
 | Lane | 角色 | 输出 |
 |---|---|---|
-| papers/conferences | `researcher` + main agent | arXiv primary paper 候选与 duplicate 风险 |
-| products/platforms | `researcher` | 官方产品文档、release notes、changelog |
-| GitHub/benchmarks | `researcher` | repo/list/dataset discovery signals only |
+| papers/conferences | `researcher` + main agent | arXiv / OpenReview / ACL Anthology 2026 候选与 duplicate 风险 |
+| products/platforms | `researcher` + main agent | 官方产品文档、release notes、changelog |
+| GitHub/benchmarks | `researcher` | repo/list/dataset/MCP discovery signals only |
 | repo-map | `explore` | counts、landing files、现有条目和别名风险 |
 | source/relevance review | main agent + later reviewer | must-add / update-existing / watchlist / adjacent / reject |
 
@@ -32,64 +32,72 @@ Agent Memory、Memora 和多条 7 月论文 seed 已在开 PR 中。本轮不重
 
 | Action | Item | Why it matters | Local anchor |
 |---|---|---|---|
-| must-add | Zero-Mem | 把 memory write/read path 的 LLM 调用成本单独提出,要求评估 memory operations 的 token/latency 开销 | [`../papers/zero-mem-zero-token-memory-operations.md`](../papers/zero-mem-zero-token-memory-operations.md) |
-| must-add | Memory Provenance Laundering | 说明 consolidation 可能把低可信 observation 洗成高可信 user/workflow history,补 source-authority 生命周期维度 | [`../papers/memory-provenance-laundering.md`](../papers/memory-provenance-laundering.md) |
-| must-add | MemHarness | 从 replay 走向 reconstructed memory,要求检索结果匹配当前 decision state 而不是只看语义相似度 | [`../papers/memharness-memory-reconstructed-not-replayed.md`](../papers/memharness-memory-reconstructed-not-replayed.md) |
-| must-add | Filesystem-Based Memory | 把 Markdown/file-tree memory 作为真实 agent substrate,强调组织漂移、冲突、过期和可持续性 | [`../papers/filesystem-based-memory-llm-agents.md`](../papers/filesystem-based-memory-llm-agents.md) |
-| must-add | MemSecBench | 追踪 memory poisoning 从持久化到后续 action consequence 再到 selective repair | [`../benchmarks/memsecbench.md`](../benchmarks/memsecbench.md) |
-| must-add | Setoka | 个性化 agent 评测从显式事实召回扩展到异构数据上的层级用户理解 | [`../benchmarks/setoka.md`](../benchmarks/setoka.md) |
+| must-add | LeanMem | 按 compressibility / dynamics / fidelity 把 memory 分成 profile、event、source-grounded records,并按 query 分配 retrieval budget | [`../papers/leanmem-efficient-long-term-memory.md`](../papers/leanmem-efficient-long-term-memory.md) |
+| must-add | MemSIF | 把 raw interactions 组织成 topical segments / event trajectories,并用 CoreFact / ActiveFact 双轨事实记忆处理 delayed utility | [`../papers/memsif-dual-track-fact-memory.md`](../papers/memsif-dual-track-fact-memory.md) |
+| must-add | VerMem | 用 unified memory operation policy 管 LTM、active context 和 episodic history,并用 local/global verifier 给 memory transition credit | [`../papers/vermem-verifiable-memory.md`](../papers/vermem-verifiable-memory.md) |
+| must-add | HiGram | hierarchical graph memory + path-level localization/rewrite,补 graph memory 的 dependency-aware update 形态 | [`../papers/higram-hierarchical-graph-memory.md`](../papers/higram-hierarchical-graph-memory.md) |
+| must-add | MemoryCPT | 用 Query-agnostic Distillation + Query-aware Retrieval/Summarization 优化 Quality per Cost,补成本专题 | [`../papers/memorycpt-cost-performance-memory.md`](../papers/memorycpt-cost-performance-memory.md) |
+| must-add | RoMeRL | reduced-order utility states 处理 self-evolving memory 的 feedback sparsity 和 memory-reward trap | [`../papers/romerl-memory-reward-trap.md`](../papers/romerl-memory-reward-trap.md) |
+| must-add | MutMem | signed mutation transitions 和 poison-label retention 补 persistent memory integrity / authorized adaptation 维度 | [`../papers/mutmem-authorized-mutation.md`](../papers/mutmem-authorized-mutation.md) |
+| must-add | Router-Mem | evidence-sufficiency router 在 low-cost recall 和 deeper memory execution 之间切换,补 latency-aware memory execution | [`../papers/router-mem-progressive-execution.md`](../papers/router-mem-progressive-execution.md) |
+| must-add | V-Mem | modality-routed retrieval 处理 text/image memory 的 modality gap 和 similarity-relevance gap | [`../papers/v-mem-multimodal-agentic-memory.md`](../papers/v-mem-multimodal-agentic-memory.md) |
+| must-add | Salami Attack / MemCollusion | collusive multi-record poisoning 把 memory safety 从单条记录检测推进到跨 fragment coalition | [`../papers/salami-attack-collusive-memory-poisoning.md`](../papers/salami-attack-collusive-memory-poisoning.md) |
+| must-add | Memory Reward Inflation | memory score / reward 信号相关性会放大错误经验,补 self-improving memory evaluator 风险 | [`../papers/memory-reward-inflation.md`](../papers/memory-reward-inflation.md) |
+| must-add | StateAuditor | 已更新 memory 仍可能驱动 stale behavior;从 stored state 到 draft 反向审计 implicit dependency | [`../papers/stateauditor-stale-dependencies.md`](../papers/stateauditor-stale-dependencies.md) |
+| watchlist-to-seed | MERIT | Text-to-SQL repair 的 causal episodic memory 相关但 domain-specific;本轮按 seed 记录并标 caveat | [`../papers/merit-causal-episodic-memory.md`](../papers/merit-causal-episodic-memory.md) |
+| must-add | AgentMemBench | memory strategy comparison 同时看 retrieval / answer quality / footprint / latency,注意与 MemoryAgentBench 区分 | [`../benchmarks/agentmembench.md`](../benchmarks/agentmembench.md) |
+| must-add | FinPerMA | event-grounded personalized-memory benchmark,用 Post-Shock checkpoint 检查 preference update | [`../benchmarks/finperma.md`](../benchmarks/finperma.md) |
+| must-add | AuthMem-Bench | source authority 在 consolidation boundary 丢失会导致 unauthorized reuse,补 governance benchmark | [`../benchmarks/authmem-bench.md`](../benchmarks/authmem-bench.md) |
 
 ### Products
 
 | Action | Product | Why it matters | Local anchor |
 |---|---|---|---|
-| update-existing | Google Agent Platform Memory Bank | 官方 setup docs 继续把 topics、TTL、自定义配置和 Agent Runtime read/write 集成作为 Memory Bank 使用面;仍只支持 product behavior claim | [`../products/google-memory-bank.md`](../products/google-memory-bank.md) |
-| update-existing | Mem0 | 官方 changelog 出现 n8n / Zapier integration,说明 workflow automation memory 接入面扩大;不是架构或 benchmark 结论 | [`../products/mem0.md`](../products/mem0.md) |
-| update-existing | Zep | 官方 changelog 给 graph node/edge valid-time 排序、opaque page token 和 `is_null` date filter,加强 temporal graph query control | [`../products/zep.md`](../products/zep.md) |
-| update-existing | AWS AgentCore Memory | Bedrock Agents Classic maintenance-mode docs 与 AgentCore release notes 继续把 AgentCore memory 作为迁移/新建 agent runtime 能力面 | [`../products/aws-agentcore-memory.md`](../products/aws-agentcore-memory.md) |
-| update-existing / watchlist | TencentDB Agent Memory | v2 beta/team memory 信号相关,但主 release 在 2026-07-21/22;本轮只记录为 watch/update signal,不升级性能 claims | [`../products/tencentdb-agent-memory.md`](../products/tencentdb-agent-memory.md) |
-| update-existing | Hindsight | official `v0.8.6` release 增加 `list_memory_units` ingest-age filtering,作为 API surface / lifecycle 查询信号 | [`../products/hindsight.md`](../products/hindsight.md) |
+| update-existing | Microsoft Foundry Agent Service Memory | 2026-08-05 Learn how-to 明确 memory store/item CRUD、default TTL/retention、scope 和 direct remember/forget command behavior | [`../products/microsoft-foundry-memory.md`](../products/microsoft-foundry-memory.md) |
+| update-existing | AWS Bedrock AgentCore Memory | 2026-08 release notes 显示 memory / policy / harness 进入 AWS GovCloud US-West,补 enterprise/compliance deployment signal | [`../products/aws-agentcore-memory.md`](../products/aws-agentcore-memory.md) |
 
 ## Watchlist / adjacent / reject
 
 | Decision | Item | Reason |
 |---|---|---|
-| watchlist | MemTX / MemTxn / ChronoMem | transactional commit、source-supported updates、semantic rollback 与 memory governance 强相关,但本轮避免一次性扩大 seed 数;下轮优先精读 |
-| watchlist | MemLens / MemChain / Know It, Act on It / Beyond Retrieval Analytic Memory | 都是强候选,分别覆盖 interactive analytics、interpretable traces、preference utilization、multimodal analytic memory;先记录,等待 full source read |
-| watchlist | Databricks Managed Agent Memory / Memora | 已在未合并 PR `#18` 中覆盖,本轮不重复写入当前分支 |
-| watchlist | OWASP Agent Memory Guard / Mnemoverse MCP Memory / AMBIENT | GitHub/API/catalog discovery 相关,且 OWASP/Mnemoverse 有 primary follow-up;本轮未完成 product note 或 benchmark note source read |
-| watchlist | Letta Memory Filesystem | 官方 changelog 页缺少可核验日期;功能相关但不按本周窗口升级 |
-| watchlist | inspeximus / ai-memory-mcp / memgres / sqlite-graph-memory | GitHub-only 或 vendor/self-claimed benchmark 信号;先保留 discovery,不升级为产品/benchmark 证据 |
-| adjacent | Microsoft Foundry Local Agentic Retrieval | 2026-07 release note 说 agentic memory management for long conversations,但与既有 Foundry Agent Service Memory surface 边界不清 |
-| adjacent | HAM-VLN / TransMem / hidden-state memory items | 与 memory 有关,但偏 embodied navigation、hidden-state/context compression 或模型内部记忆,不是本轮 core agent-memory evidence |
-| reject as performance evidence | GitHub stars, README benchmark numbers, vendor benchmark rows, catalog placement | 只能用于 discovery 或 vendor/product behavior,不能支持性能/质量结论 |
-| source mismatch | no new mismatched canonical URL promoted | 本轮收录条目均使用直接 arXiv 或官方产品 URL;未把 search snippet 日期当作 source fact |
+| watchlist | Anthropic Claude Managed Agents | 2026-08-07 release notes 增强 managed-agent surface,但本周未发现 memory-store-specific 新能力 |
+| watchlist | Cloudflare Think / Redis Iris / Alibaba Memory billing / Oracle Select AI memory depth | 官方来源有相邻产品行为或未来商业化信号,但不是本轮核心 memory product 能力新增 |
+| watchlist | Mem0 / TencentDB Agent Memory | 有上游新 release / repo positioning,但 PR #19 已刷新这些产品;为避免 open-PR 重复,本轮不在 `origin/main` branch 上二次推广 |
+| watchlist | Agent Memory Leaderboard / MedMemoryBench / AgentMemoryBench / Agent Memory Atlas | GitHub benchmark/list discovery signal;需 primary protocol / artifact / license review |
+| watchlist | bettermemory / NeuraKeep / MemoryRouter / Lodekeep / AMFS / Memory Engine / AtomicMemory / Sibyl Memory / JiuwenMemory / Memorix / Agent Memory Vault | MCP or GitHub discovery;catalog placement、pushedAt、README claims 不能支持产品质量或 maturity 结论 |
+| watchlist | LiveMem / GROVE / FocusMem / AntiSkillBench / Memory-ITT / MINDSET / StaleBench / MRMS | 相关但存在 model-internal、multimodal/GUI/domain-specific 或 OpenReview direct-access caveat;先等 source/code/protocol 复核 |
+| adjacent | SafeCommit | safety layer 与 memory-grounded action 有关,但不是 memory subsystem / benchmark 本身 |
+| reject for now | Librarian Agents | filesystem construction 与 open PR #19 的 Filesystem-Based Memory duplicate risk 高;OpenReview direct fetch 未过 |
+| reject as performance evidence | GitHub stars, README benchmark numbers, MCP catalog placement, vendor release prose | 只能作为 discovery 或 product behavior,不能支持性能/质量结论 |
+| source mismatch | no new mismatched canonical URL promoted | 本轮 arXiv canonical title / ID 均直接复核;OpenReview challenge 页面未推广为 accepted source |
 
 ## Evidence gaps / next verification
 
 | Item | Gap | Why not blocking |
 |---|---|---|
-| Zero-Mem / provenance laundering / MemHarness / filesystem memory | 尚未 full read PDF、code/data/license 和 exact setup | 本轮只登记 seed note,不登记 score claim |
-| MemSecBench / Setoka | benchmark task construction、metrics、data provenance 和 reported result 未完整归一化 | claims ledger 只记录 origin protocol event |
-| Product updates | official docs/changelog support product behavior only | 未写任何 independent benchmark、quality 或 superiority claim |
-| PR `#18` overlap | open July 27 PR 未合并 | 本轮显式排除重复条目,避免 current-main 分支冲突扩大 |
+| All new paper seeds | 尚未 full read PDF、artifact license、code/data availability、exact benchmark setup | 本轮只登记 seed note,不登记 normalized score claim |
+| New benchmark notes | claims ledger 只记录 origin protocol event | 不登记 reported metrics;不作为 independent reproduction |
+| Microsoft / AWS product updates | 官方 docs 支持 product behavior only | 未写任何 independent benchmark 或 superiority claim |
+| Open PR overlap | PR #16-#19 仍 open,且本 branch 基于 `origin/main` | radar 明确标注 duplicate avoidance;后续 merge 需解决 overlap |
+| External link crawl | 本轮只做 targeted reachability | 没有做全仓 link checker |
 
 ## Trend synthesis
 
-- **Memory governance is moving into transaction/provenance territory**:provenance
-  laundering、MemSecBench、MemTX/MemTxn/ChronoMem watchlist 都把 memory 从"召回"
-  推向 authority、commit、rollback、repair。
-- **Memory cost needs write/read-path accounting**:Zero-Mem 和 MemDelta 类工作都说明
-  final-answer tokens 不是 memory 系统总成本。
-- **Human-editable substrates are becoming first-class**:filesystem memory 与
-  Letta Memory Filesystem 信号共同强化 Markdown/file-tree memory 的工程现实性。
-- **Personalization benchmarks are getting deeper**:Setoka 和 Know It, Act on It
-  把个性化从事实召回推进到用户理解与行动使用。
+- **Memory is becoming typed at write time**:LeanMem、MemSIF、VerMem 都把 memory
+  lane / operation / verification 从通用摘要中拆出来。
+- **Cost-aware memory is now first-class**:Router-Mem、MemoryCPT、LeanMem 都要求
+  quality 与 latency / token / construction cost 一起报告。
+- **Security moved from poisoned content to authorized state transitions**:
+  MutMem、AuthMem-Bench、Salami Attack、StateAuditor 都把 provenance、authority、
+  mutation 和跨记录合谋变成核心风险。
+- **Benchmarks are specializing beyond static recall**:FinPerMA、AuthMem-Bench、
+  AgentMemBench 分别压 personalized event shocks、source authority 和 strategy
+  quality/cost comparison。
 
 ## Review notes
 
-- 收录项均要求 primary source:论文用 arXiv,产品用官方 docs / changelog / release notes。
+- 收录项均要求 primary source:论文用 arXiv,产品用官方 docs / release notes。
 - GitHub stars、README 性能数字、MCP catalog 和 awesome-list placement 只作 discovery。
 - Author-reported benchmark results are paper-origin claims;vendor numbers are vendor claims。
-- 本轮 benchmark catalog 从 21 行增至 23 行;paper seed notes 从 15 增至 19;product
-  note count 不变,Hindsight 等只做 update-existing。
+- 本轮 benchmark catalog 从 21 行增至 24 行;paper seed notes 从 15 增至 28;product
+  note count 不变。

@@ -145,6 +145,18 @@ metadata-scoped governance、商业化计费边界和 Add/Search/Profile API sur
 或 benchmark table claims 本轮不进入 accepted refresh;后续使用前需先按 claims
 ledger 规范归档。
 
+### A3.1 2026-08 product refresh note
+
+- AWS AgentCore release notes now list AgentCore memory, policy, and harness as
+  available in AWS GovCloud (US-West). This updates deployment/region coverage
+  for [`../products/aws-agentcore-memory.md`](../products/aws-agentcore-memory.md)
+  only; it is product-behavior evidence, not independent quality or performance
+  evidence.
+- Microsoft Foundry Agent Service Memory usage docs now expose memory store /
+  item CRUD, default TTL / retention, scopes, and direct remember / forget
+  behavior for [`../products/microsoft-foundry-memory.md`](../products/microsoft-foundry-memory.md).
+  This is preview product-behavior evidence, not an independent benchmark.
+
 ### A4. Coding & Dev agents(memory 用于代码上下文)
 
 | 名称 | Mode | Audience | 备注 |

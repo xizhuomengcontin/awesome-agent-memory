@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-08-03
+last_revised: 2026-08-10
 archive: archives/aws-agentcore-memory-overview.md
 ---
 
@@ -60,10 +60,11 @@ Kinesis,用于下游审计、同步或增量处理。该能力是产品行为证
 
 ## 3.3 2026-08 refresh
 
-2026-08-03 周更复核时,AWS Bedrock Agents Classic maintenance-mode docs 建议新建或
-迁移工作负载使用 AgentCore,而 AgentCore release notes / developer guide 继续把
-memory 作为 agent runtime 的内建或 BYO 能力面。该信号支持"AgentCore Memory 是 AWS
-agent runtime 迁移路径的一部分"这一产品行为判断,不支持性能或质量结论。
+2026-08-10 复核 AWS AgentCore release notes 时,官方页面显示 2026-08 的
+"Memory, policy, and harness are now available in AWS GovCloud (US-West)"。
+这说明 AgentCore Memory 的短期 / 长期记忆能力已经扩展到 `us-gov-west-1` 这种
+合规区域。该更新只支持区域覆盖、采购可用性和企业合规部署判断,不支持 memory
+质量、性能或安全性优于其他产品的结论。
 
 ## 4. 决策相关性 / Decision relevance
 
@@ -94,7 +95,6 @@ agent runtime 迁移路径的一部分"这一产品行为判断,不支持性能�
 - Metadata:https://aws.amazon.com/about-aws/whats-new/2026/05/agentcore-longterm-memory-metadata/
 - Harness GA:https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-is-now-generally-available-go-from-idea-to-production-grade-agent-in-minutes/
 - Release notes:https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html
-- Bedrock Agents Classic maintenance mode:https://docs.aws.amazon.com/bedrock/latest/userguide/agents-classic-maintenance-mode.html
 
 ---
 
