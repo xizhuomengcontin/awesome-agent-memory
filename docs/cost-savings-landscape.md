@@ -67,6 +67,16 @@ language: zh-CN
 | [`LeanMem`](../papers/leanmem-efficient-long-term-memory.md) | seed paper note | 按 profile/event/source-grounded memory 分流存储和 query-specific retrieval budget。 | seed 质量;作者报告的成本 / latency / accuracy 需要 full read。 |
 | [`MemoryCPT`](../papers/memorycpt-cost-performance-memory.md) | seed paper note | 用 Query-agnostic Distillation + Query-aware Retrieval/Summarization 优化 Quality per Cost。 | seed 质量;QPC、训练成本和 artifact 需复核。 |
 
+### 2026-08 current-source additions
+
+| Item | Current repo status | Cost-saving relevance | Evidence boundary |
+|---|---|---|---|
+| [`ContextPilot`](../papers/contextpilot-proactive-context-management.md) | seed paper note | Proactive context management combines planning, long-term memory, and soft offloading for long-horizon tasks. | seed quality;reported gains and code path need full read. |
+| [`EARM`](../papers/earm-experience-amortized-reranking.md) | seed paper note | Reuses query-memory relevance scores through matrix completion to reduce repeated LLM reranking. | seed quality;cost/quality trade-off and cache invalidation need extraction. |
+| [`KOPE`](../papers/kope-experience-graph-memory.md) | seed paper note | Experience graph memory for kernel optimization claims lower search effort and better reuse of past optimization attempts. | seed quality;domain-specific and not direct conversational memory evidence. |
+| [`CaSKG`](../papers/caskg-skill-graph-retrieval.md) | seed paper note | Skill-graph retrieval can constrain multi-agent communication/search overhead. | seed quality;skill graph construction cost and task coverage need full read. |
+| [`GraphMemix`](../papers/graphmemix-evidence-forests.md) | seed paper note | Evidence forests suggest a bounded graph-memory alternative for retrieval and reasoning over multimodal evidence. | seed quality;claims remain paper-origin until normalized. |
+
 ### Candidate papers and code paths to upgrade
 
 | Item | Local anchor | External source checked 2026-06-30 | Why it belongs here | Upgrade path |

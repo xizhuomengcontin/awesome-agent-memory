@@ -21,25 +21,23 @@ removed.
 
 ## 2026-08 manual radar additions
 
-These entries were added by the 2026-08-10 weekly radar refresh. They are not
+These entries were added by the 2026-08-31 weekly radar refresh. They are not
 part of the 2026-05-19 nine-list scrape statistics above.
 
-- [Stop When Memory Suffices: Evidence-Conditioned Progressive Execution for LLM Agents](router-mem-progressive-execution.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.01285)
-- [LeanMem: Simple and Efficient Long-Term Memory for LLM Agents](leanmem-efficient-long-term-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.03463)
-- [MemSIF: From Structured Interactions to Dual-Track Fact Memory for LLM Agents](memsif-dual-track-fact-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.01742)
-- [Verifiable Memory: Learning Unified Memory Management with Local and Global Verifiers for Large Language Model Agents](vermem-verifiable-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.03137)
-- [Hierarchical Graph Memory for LLM Agents with Path-level Localization and Rewrite](higram-hierarchical-graph-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.05095)
-- [MemoryCPT: An End-to-End Agent Memory Framework for Cost-Performance Trade-off](memorycpt-cost-performance-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.04843)
-- [RoMeRL: Balancing Feedback Coverage and the Memory-Reward Trap in Self-Evolving Agent Memory via Reduced-Order Utility States](romerl-memory-reward-trap.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.02508)
-- [MutMem: Cryptographically Authorized Mutation in Persistent Agent Memory](mutmem-authorized-mutation.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.02843)
-- [V-Mem: Modality-Routed Retrieval for Long-Term Multimodal Agentic Memory](v-mem-multimodal-agentic-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.01543)
-- [Salami Attack: Stealthy Collusive Memory Poisoning against OpenClaw](salami-attack-collusive-memory-poisoning.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.01637)
-- [Memory Reward Inflation in Self-Improving LLM Agents](memory-reward-inflation.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2608.00017)
-- [When Memory Updates but Behavior Does Not: Repairing Implicit Stale Dependencies in Personalized Agent Responses](stateauditor-stale-dependencies.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.01619)
-- [Causal Episodic Memory for Feedback-Driven Agent Repair](merit-causal-episodic-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.05906)
-- [AgentMemBench: A Systematic Benchmark for Evaluating Long-Term Memory Management Strategies in Conversational AI Agents](../benchmarks/agentmembench.md) — 2026-06 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.00009)
-- [FinPerMA: A Theory-Informed, Event-Grounded Personalized-Memory Benchmark for LLM Agents](../benchmarks/finperma.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.04095)
-- [When Memory Becomes Authority: Benchmarking Authority Collapse at the Memory Consolidation Boundary](../benchmarks/authmem-bench.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.01679)
+- [ContextPilot: Proactive Context Management for Long-Horizon Agentic Tasks](contextpilot-proactive-context-management.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.28476)
+- [The Retriever Should Remember: Experience-Amortized Reranking for Conversational Memory](earm-experience-amortized-reranking.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.22767)
+- [Recuris: Recursive Experiential-Working Memory Evolution for LLM Agents](recuris-experiential-working-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.24876)
+- [EviGraph: Improving LLM Agents with Quality-Guaranteed Graph Construction for Problem-Solving](evigraph-evidence-construction.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.24667)
+- [KOPE: Kernel Optimization via Experience Graph Memory](kope-experience-graph-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.25570)
+- [CaSKG: Counterfactual-Causal Skill Graphs for Scalable Agent Skill Retrieval](caskg-skill-graph-retrieval.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.25500)
+- [UAQ: Uncertainty-Aware Querying for Agentic Memory](uaq-agent-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.27924)
+- [GraphMemix: Evidence Forests for Graph-Based Memory Reasoning](graphmemix-evidence-forests.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.26983)
+- [Constraint Weakening in Agent Workflows](constraint-weakening-agent-workflows.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.24569)
+- [InjecMEM: Benchmarking Memory Injection Attacks on LLM Agents](../benchmarks/injecmem.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.23471)
+- [The Compaction Cliff: Evaluating Context Compaction in LLM Agents](../benchmarks/compaction-cliff.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.22752)
+- [When Stale Constraints Go Unchecked](../benchmarks/stale-constraints.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.25553)
+- [MemUse: Benchmarking Natural Integration of Conversational Memory](../benchmarks/memuse.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.24189)
+- [Agent Memory Leaderboard](../benchmarks/agent-memory-leaderboard.md) — 2026-08 — benchmark-platform candidate — [github](https://github.com/AML-memory/agent-memory-leaderboard)
 
 ## 2026-07 manual radar additions
 

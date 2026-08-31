@@ -10,7 +10,7 @@ evidence_level: medium
 code_available: yes
 license: Apache 2.0
 status: seed
-last_revised: 2026-07-27
+last_revised: 2026-08-31
 ---
 
 # Letta(原 MemGPT)
@@ -49,18 +49,22 @@ Letta 把它产品化为 stateful agent runtime。
 - Letta 在公开 memory benchmark 上的表现?
 - archival memory 的实际大小和检索成本曲线?
 
+## 2026-08 Letta Code memory layout releases
+
+Letta Code release notes in late August add memory-layout controls to the coding
+agent surface. v0.31.4 introduced configurable memory layout behavior, v0.31.5
+added root-layout memory prompts, and the adjacent v0.31.6 notes continue the
+theme with memory limits and shared-memory frontmatter.
+
+This is product-behavior evidence for explicit memory prompt/layout management
+inside a coding agent. It should stay separate from Letta/MemGPT architecture
+claims and from any benchmark-performance claim.
+
+> 来源:https://github.com/letta-ai/letta-code/releases
+
 ## Notes
 
-### 2026-07 trajectory signal
-
-Letta 2026-07-23 blog 发布 `@letta-ai/trajectory`,把 Claude Code、Codex、
-Letta Code 等 agent harness 的 transcript 归一化为 agent experience data。博客
-说明 trajectory 可被索引或交给 memory agents 处理,Letta Code 也可用它从其他
-harness 的 session 中 bootstrap memory,并让 background dreaming 跨 harness
-consolidate lessons into persistent memory。
-
-这属于 product-research / vendor blog evidence。它强化了 Letta 的 "agent runtime
-+ long-term memory" 路线,但不支持独立 benchmark 或成熟度结论。
+(随版本更新追踪)
 
 ---
 

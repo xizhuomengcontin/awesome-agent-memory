@@ -1,6 +1,6 @@
 ---
 title: Products landscape — agent memory by domain × audience
-date: 2026-07-13
+date: 2026-08-31
 status: working-spec
 language: zh-CN
 ---
@@ -25,6 +25,13 @@ language: zh-CN
 
 下表条目的判定标准是:**产品本身把"记忆"作为一等公民设计**;只是顺带做向量
 检索或 RAG 的不算。
+
+## 2026-08 product-signal note
+
+2026-08-31 refresh 没有新增核心产品数,但更新了四个既有产品笔记:Claude
+Cowork/app memory 控制面、Mem0 DeepSeek Harness plugin、TencentDB Agent Memory
+v2.0.1 session / Memory Hub release、Letta Code memory layout releases。它们都按
+官方产品行为记录,不提升为独立 benchmark evidence。
 
 ## 分类标准
 
@@ -68,14 +75,6 @@ language: zh-CN
 
 ## A. 按领域分类
 
-### 2026-08 source refresh note
-
-2026-08-03 周更只更新 existing product behavior,不新增核心产品计数。Google
-Memory Bank、Mem0、Zep、AWS AgentCore Memory、TencentDB Agent Memory 和 Hindsight 的变化分别
-记录在产品笔记与 [`product-discovery-log.md`](product-discovery-log.md)。这些变化
-来自官方 docs / changelog / release sources,只能支持 product behavior 或 vendor
-self-report,不能支持独立 benchmark 结论。
-
 ### A1. Agent memory 专门层(memory-as-a-product)
 
 | 名称 | 笔记 | Mode | Audience | 一句话 |
@@ -94,7 +93,6 @@ self-report,不能支持独立 benchmark 结论。
 | Redis Agent Memory Server | [`../products/redis-agent-memory-server.md`](../products/redis-agent-memory-server.md) | OSS | Redis 用户 / agent builder | working + long-term 双层 memory API server,提供 REST 与 MCP |
 | PowerMem | [`../products/powermem.md`](../products/powermem.md) | OSS | coding agent 用户 / agent builder / OceanBase 生态 | Experience + Skill distillation,多接口 memory plugin/API server |
 | Basic Memory | [`../products/basic-memory.md`](../products/basic-memory.md) | OSS+SaaS | 个人开发者 / 团队 / Markdown 用户 | local-first Markdown memory + knowledge graph + MCP |
-| Tree Ring Memory | [`../products/tree-ring-memory.md`](../products/tree-ring-memory.md) | OSS | coding agent 用户 / 本地优先开发者 | Rust CLI + SQLite/FTS 的 memory lifecycle layer,强调 recall/forget/audit/consolidation |
 | ByteRover(原 Cipher) | [`../products/byterover.md`](../products/byterover.md) | Source-available | coding agent 用户 / 团队 | autonomous coding agents 的 portable memory layer |
 | Honcho | [`../products/honcho.md`](../products/honcho.md) | OSS+SaaS | agent builder / multi-agent 产品 | peer-centric stateful agent memory infrastructure |
 | agentmemory | [`../products/agentmemory.md`](../products/agentmemory.md) | OSS | coding agent 用户 | multi-client persistent memory for Claude Code / Codex / Cursor / OpenClaw |
@@ -131,31 +129,6 @@ self-report,不能支持独立 benchmark 结论。
 | Cloudflare Agent Memory | [`../products/cloudflare-agent-memory.md`](../products/cloudflare-agent-memory.md) | Big-tech-builtin / Private beta | Cloudflare Agents 用户 |
 | Oracle AI Agent Memory | [`../products/oracle-ai-agent-memory.md`](../products/oracle-ai-agent-memory.md) | Enterprise platform | Oracle AI Database 客户 |
 | Alibaba Cloud Bailian Memory Library | [`../products/alibaba-bailian-memory.md`](../products/alibaba-bailian-memory.md) | Cloud platform | 百炼 / Model Studio 开发者 |
-| Databricks Managed Agent Memory | [`../products/databricks-managed-agent-memory.md`](../products/databricks-managed-agent-memory.md) | Cloud platform / Beta | Azure Databricks / Unity Catalog agent builder |
-
-2026-07-13 refresh note:Google Memory Bank 的 2026-07-08 release notes 把
-`IngestEvents` 标为 GA,并加入 Gemini Embedding 2 similarity-search configuration。
-这加强了其 event ingestion / memory generation 解耦的 managed memory 产品面;
-证据类别仍是官方产品行为,不代表独立 benchmark 复现。
-
-同轮产品复核还更新 Oracle AI Agent Memory 26.6、Zep ABAC、TencentDB Agent
-Memory 计费页和 Alibaba long-term memory API reference。Oracle / Zep / Tencent /
-Alibaba 的更新分别对应 enterprise DB memory lifecycle controls、API-key
-metadata-scoped governance、商业化计费边界和 Add/Search/Profile API surface。性能
-或 benchmark table claims 本轮不进入 accepted refresh;后续使用前需先按 claims
-ledger 规范归档。
-
-### A3.1 2026-08 product refresh note
-
-- AWS AgentCore release notes now list AgentCore memory, policy, and harness as
-  available in AWS GovCloud (US-West). This updates deployment/region coverage
-  for [`../products/aws-agentcore-memory.md`](../products/aws-agentcore-memory.md)
-  only; it is product-behavior evidence, not independent quality or performance
-  evidence.
-- Microsoft Foundry Agent Service Memory usage docs now expose memory store /
-  item CRUD, default TTL / retention, scopes, and direct remember / forget
-  behavior for [`../products/microsoft-foundry-memory.md`](../products/microsoft-foundry-memory.md).
-  This is preview product-behavior evidence, not an independent benchmark.
 
 ### A4. Coding & Dev agents(memory 用于代码上下文)
 
@@ -170,7 +143,6 @@ ledger 规范归档。
 | TencentDB Agent Memory OpenClaw plugin | OSS+SaaS | OpenClaw 用户 | 自动 capture / recall,并保留 Mermaid task canvas |
 | Hy-Memory OpenClaw plugin | Plugin | OpenClaw 用户 | 多 agent 共享 userId namespace 的长期记忆 |
 | Basic Memory | OSS+SaaS | Claude / Codex / Cursor / VS Code 用户 | Markdown files + MCP,人和 agent 共用 memory |
-| Tree Ring Memory | OSS | Claude Code / Codex / OpenCode / DOX/Revolve 用户 | Rust CLI + `.tree-ring` guidance,项目级 recall/forget/audit/consolidation |
 | ByteRover | Source-available | autonomous coding agent 用户 | CLI/MCP/context tree 跨 agent 共享项目 memory |
 | PowerMem | OSS | Claude Code / Codex / Cursor / OpenClaw 用户 | CLI/HTTP/MCP/插件共用后端 memory |
 | Redis Agent Memory Server | OSS | 任意 MCP/REST agent | Redis-backed memory server,支持 working/long-term memory |
@@ -233,7 +205,6 @@ ledger 规范归档。
 | Cloudflare Agent Memory | SaaS / Private beta | Cloudflare Workers/Agents 客户 |
 | Oracle AI Agent Memory | Enterprise platform | Oracle AI Database 客户 |
 | Alibaba Bailian Memory Library | SaaS | 阿里云百炼客户 |
-| Databricks Managed Agent Memory | SaaS / Beta | Azure Databricks / Unity Catalog 客户 |
 | Redis Agent Memory Server | OSS / self-host | Redis 用户 / 企业平台团队 |
 
 ### A9. DB / Vector store 衍生的 memory API
@@ -258,13 +229,13 @@ memory kernel 通常的关系是:**复用**它们做底层 vector store,**不取
 Letta self-host / Mem0 self-host / Zep self-host / Graphiti / Cognee /
 Obsidian + 插件 / LangMem / Hindsight / TencentDB Agent Memory /
 EverOS / MemOS / Redis Agent Memory Server / PowerMem / Basic Memory /
-Tree Ring Memory / ByteRover / Honcho / agentmemory / Memori / memU / memsearch /
+ByteRover / Honcho / agentmemory / Memori / memU / memsearch /
 OpenViking / MemoryOS / A-MEM / MemX /
 Supermemory self-host。
 
 ### B2. 中小团队 / SaaS startup
 Mem0 cloud / Zep cloud / Supermemory API / Hindsight cloud / Basic Memory
-Cloud / Honcho API / Redis Agent Memory Server / Tree Ring Memory / agentmemory / Memori / memU /
+Cloud / Honcho API / Redis Agent Memory Server / agentmemory / Memori / memU /
 memsearch / OpenAI Assistants / Pinecone / Cursor for Teams。
 
 ### B3. 大企业
@@ -273,7 +244,7 @@ Cognition Devin / Sierra / Decagon / Supermemory Enterprise /
 Tencent Cloud Agent Memory / AWS Bedrock AgentCore Memory /
 Google Agent Platform Memory Bank / Microsoft Foundry Agent Service Memory /
 Cloudflare Agent Memory / Oracle AI Agent Memory / Alibaba Bailian Memory /
-Databricks Managed Agent Memory / Personal AI Memory Core。
+Personal AI Memory Core。
 
 ### B4. C 端最终用户
 ChatGPT memory / Claude memory / Gemini personal context /
