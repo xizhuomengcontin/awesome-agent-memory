@@ -35,11 +35,9 @@ language: zh-CN
 | memory-induced sycophancy | [`MemSyco-Bench`](../benchmarks/memsyco-bench.md) | whether retrieved memory should influence factual reasoning, conflicts, updates, and personalization | seed,origin paper logged; results/resources not normalized |
 | multimodal deletion leakage | [`MemLeak`](../benchmarks/memleak.md) | residual recovery after deletion via correlated text and retained images | seed,origin paper logged; image/data/setup not normalized |
 | baseline-control methodology | [`MemDelta`](../benchmarks/memdelta.md) | component-controlled memory-vs-RAG/full-context evaluation and write-path cost discipline | seed,methodology event logged; not an end-agent leaderboard |
-| persistent memory injection | [`InjecMEM`](../benchmarks/injecmem.md) | memory injection / poisoned retrieval / cross-session safety | seed,origin paper logged; protocol/results not normalized |
-| context compaction | [`Compaction Cliff`](../benchmarks/compaction-cliff.md) | rule retention / artifact retrieval / downstream compliance after compaction | seed,origin paper logged; protocol/results not normalized |
-| inherited-memory freshness | [`Stale Constraints`](../benchmarks/stale-constraints.md) | supersession detection / freshness verification / budgeted rechecking | seed,origin paper logged; protocol/results not normalized |
-| natural conversational memory use | [`MemUse`](../benchmarks/memuse.md) | direct QA vs natural memory integration in responses | seed,origin paper logged; deployment/protocol not normalized |
-| benchmark platform | [`Agent Memory Leaderboard`](../benchmarks/agent-memory-leaderboard.md) | public benchmark registry and submission hub | candidate,repository discovered; governance not normalized |
+| authorization-bearing memory | [`EAL-Bench`](../benchmarks/eal-bench.md) | authorization-state fidelity / revocation tracking / downstream unauthorized-action risk | seed,origin paper logged; task setup and safeguards not normalized |
+| evidence utilization | [`UTILMEM`](../benchmarks/utilmem.md) | distributed evidence integration / implicit relevance / distractor resistance / task-oriented synthesis | seed,origin paper logged; code/data/license not normalized |
+| multimodal identity memory | [`ICM-Bench`](../benchmarks/icm-bench.md) | recurring person identity / cross-time relations / multimodal evidence binding | seed,origin paper logged; generation pipeline and released artifacts not normalized |
 
 ## B. 初始交叉统计
 
@@ -66,11 +64,9 @@ language: zh-CN
 | MemSyco-Bench | 1 | origin paper logged; memory-induced sycophancy protocol not yet normalized |
 | MemLeak | 1 | origin paper logged; multimodal deletion-leakage protocol not yet normalized |
 | MemDelta | 1 | methodology event logged; use for claims discipline, not direct benchmark ranking |
-| InjecMEM | 1 | origin paper logged; persistent memory-injection threat model not yet normalized |
-| Compaction Cliff | 1 | origin paper logged; compaction/rule-retention protocol not yet normalized |
-| Stale Constraints | 1 | origin paper logged; inherited-memory freshness protocol not yet normalized |
-| MemUse | 1 | origin paper logged; natural memory integration benchmark not yet normalized |
-| Agent Memory Leaderboard | 1 | platform/repository discovery logged; governance and protocol not yet normalized |
+| EAL-Bench | 1 | origin paper logged; authorization laundering protocol not yet normalized |
+| UTILMEM | 1 | origin paper logged; evidence-utilization protocol not yet normalized |
+| ICM-Bench | 1 | origin paper logged; identity-centric multimodal memory protocol not yet normalized |
 
 ### B2. Evaluation uses / baseline comparisons
 
@@ -116,6 +112,9 @@ language: zh-CN
 | MemoryAgentBench | 1 | Survey mention only |
 | DynamicMem | 0 | Origin protocol only |
 | MEMPROBE | 0 | Origin protocol only |
+| EAL-Bench | 0 | Origin protocol only |
+| UTILMEM | 0 | Origin protocol only |
+| ICM-Bench | 0 | Origin protocol only |
 
 ### B7. Independent or methodological pressure
 
@@ -124,22 +123,9 @@ language: zh-CN
 | LongMemEval | ConvoMem critique | sample-size and filler-source critique, not a rerun |
 | LoCoMo | ConvoMem critique | small-conversation-count critique, not a rerun |
 | ConvoMem | own baseline comparison | strong protocol for cost/accuracy crossover, but synthetic data and Mem0-only RAG baseline caveat |
-| Compaction Cliff | origin benchmark | stresses whether context compression preserves rules and artifacts, not a third-party rerun |
-| Stale Constraints | origin benchmark | stresses verification of inherited memories after constraints change, not a third-party rerun |
-| MemUse | origin benchmark | stresses natural conversational memory integration beyond direct QA, not a third-party rerun |
-
-## B8. 2026-08 Current-Source Intake
-
-The 2026-08-31 refresh adds five benchmark-layer signals. They are all seed or
-candidate records; no leaderboard scores or paper-reported numbers are promoted.
-
-| Decision | Candidate | Handling | Caveat |
-|---|---|---|---|
-| add | [`InjecMEM`](../benchmarks/injecmem.md) | Memory-injection security benchmark. | Full attack variants, defenses, and released resources still need normalization. |
-| add | [`Compaction Cliff`](../benchmarks/compaction-cliff.md) | Context compaction / rule-retention benchmark. | AgentArtifactCorpus and Knowledge Triage setup need full read. |
-| add | [`Stale Constraints`](../benchmarks/stale-constraints.md) | Inherited-memory freshness / supersession benchmark. | Zenodo artifact and verification-budget details not yet mapped. |
-| add | [`MemUse`](../benchmarks/memuse.md) | Conversational natural-integration benchmark. | Deployment design, released data, and judge setup need extraction. |
-| watchlist | [`Agent Memory Leaderboard`](../benchmarks/agent-memory-leaderboard.md) | Public benchmark-platform candidate. | GitHub activity is discovery evidence; rankings are not used. |
+| EAL-Bench | own origin protocol | action-grounded authorization safety pressure, not a rerun |
+| UTILMEM | own origin protocol | separates retrieved evidence access from downstream evidence integration |
+| ICM-Bench | own origin protocol | extends persona memory pressure into multimodal identity binding |
 
 ## C. What Counts As Evidence
 
@@ -186,10 +172,13 @@ enters the catalog.
    becomes a kernel evaluation priority.
 9. Upgrade GateMem if shared-memory governance or enterprise scoped recall becomes
    a kernel priority.
-10. Upgrade InjecMEM, Compaction Cliff, Stale Constraints, and MemUse if
-   memory-security, compaction, freshness, or conversational-integration gates
-   become evaluation priorities.
-11. Add independent reproduction rows only when the source gives enough setup
+10. Upgrade EAL-Bench if authorization-bearing memory or enterprise action
+    safety becomes a kernel priority.
+11. Upgrade UTILMEM if evidence integration under memory pressure becomes a
+    retrieval-quality priority.
+12. Upgrade ICM-Bench if multimodal identity memory becomes a product or
+    companion-agent evaluation priority.
+13. Add independent reproduction rows only when the source gives enough setup
    detail to distinguish reruns from marketing summaries.
 
 ## F. Maintenance Contract

@@ -19,25 +19,23 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
-## 2026-08 manual radar additions
+## 2026-09-07 manual radar additions
 
-These entries were added by the 2026-08-31 weekly radar refresh. They are not
+These entries were added by the 2026-09-07 weekly radar refresh. They are not
 part of the 2026-05-19 nine-list scrape statistics above.
 
-- [ContextPilot: Proactive Context Management for Long-Horizon Agentic Tasks](contextpilot-proactive-context-management.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.28476)
-- [The Retriever Should Remember: Experience-Amortized Reranking for Conversational Memory](earm-experience-amortized-reranking.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.22767)
-- [Recuris: Recursive Experiential-Working Memory Evolution for LLM Agents](recuris-experiential-working-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.24876)
-- [EviGraph: Improving LLM Agents with Quality-Guaranteed Graph Construction for Problem-Solving](evigraph-evidence-construction.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.24667)
-- [KOPE: Kernel Optimization via Experience Graph Memory](kope-experience-graph-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.25570)
-- [CaSKG: Counterfactual-Causal Skill Graphs for Scalable Agent Skill Retrieval](caskg-skill-graph-retrieval.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.25500)
-- [UAQ: Uncertainty-Aware Querying for Agentic Memory](uaq-agent-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.27924)
-- [GraphMemix: Evidence Forests for Graph-Based Memory Reasoning](graphmemix-evidence-forests.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.26983)
-- [Constraint Weakening in Agent Workflows](constraint-weakening-agent-workflows.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.24569)
-- [InjecMEM: Benchmarking Memory Injection Attacks on LLM Agents](../benchmarks/injecmem.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.23471)
-- [The Compaction Cliff: Evaluating Context Compaction in LLM Agents](../benchmarks/compaction-cliff.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.22752)
-- [When Stale Constraints Go Unchecked](../benchmarks/stale-constraints.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.25553)
-- [MemUse: Benchmarking Natural Integration of Conversational Memory](../benchmarks/memuse.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.24189)
-- [Agent Memory Leaderboard](../benchmarks/agent-memory-leaderboard.md) — 2026-08 — benchmark-platform candidate — [github](https://github.com/AML-memory/agent-memory-leaderboard)
+- [Agent Zero Memory: Provenance-Aware Long-Term Memory for LLM Agents](agent-zero-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.29606)
+- [UTILMEM: Benchmarking Evidence Utilization in Long-Term Conversational Memory](../benchmarks/utilmem.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.30508)
+- [Agent Memory Is a Surface for Endogenous Authorization Laundering](agent-memory-authorization-laundering.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.01836)
+- [EAL-Bench: Endogenous Authorization Laundering](../benchmarks/eal-bench.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.01836)
+- [Making Prospective Memory SLM-Shaped: Typed Intention Stores for Small-Model Agents](prospective-memory-slm-shaped.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.01272)
+- [CAPTURE: Disentangling Preference Drift from Memory Poisoning in Personalized LLM Agents](capture-preference-drift-memory-poisoning.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.02265)
+- [SkillGLoW: Procedural-Family Skill Consolidation for Self-Improving Agents on Long-Horizon Task Streams](skillglow-procedural-family-skill-consolidation.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.02217)
+- [MemoryLACE: Memory Lifecycle-Aware Consolidation and Evidence Retrieval](memorylace-lifecycle-aware-consolidation.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.03201)
+- [RuleMem: Active Rule Memory for Long-Term Conversational Agents](rulemem-active-rule-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.03915)
+- [ICM-Bench: Person-Level Identity Reasoning in Multimodal Agents with Long-Term Memory](../benchmarks/icm-bench.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.04438)
+- [Compact-Memory LLM Agents via Online Max-Member Clustering and Atom-Aware Packing](compact-memory-llm-agents.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.04915)
+- [Forgetting Without Restarting: Execution-State Unlearning for Stateful LLM Agents](execution-state-unlearning.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.04875)
 
 ## 2026-07 manual radar additions
 

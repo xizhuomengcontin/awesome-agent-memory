@@ -1,6 +1,6 @@
 ---
 title: Products landscape — agent memory by domain × audience
-date: 2026-08-31
+date: 2026-06-24
 status: working-spec
 language: zh-CN
 ---
@@ -26,12 +26,14 @@ language: zh-CN
 下表条目的判定标准是:**产品本身把"记忆"作为一等公民设计**;只是顺带做向量
 检索或 RAG 的不算。
 
-## 2026-08 product-signal note
+## 2026-09-07 refresh note
 
-2026-08-31 refresh 没有新增核心产品数,但更新了四个既有产品笔记:Claude
-Cowork/app memory 控制面、Mem0 DeepSeek Harness plugin、TencentDB Agent Memory
-v2.0.1 session / Memory Hub release、Letta Code memory layout releases。它们都按
-官方产品行为记录,不提升为独立 benchmark evidence。
+本轮不新增产品 note,产品总数仍为 38。只更新三个已有条目:AWS AgentCore Memory
+补 direct long-term-memory ingestion、flexible namespaces、JSON payload 和 GovCloud
+availability;Alibaba Bailian Memory Library 补长期记忆(新) API 商业化计费、
+Pro/Lite 检索、metadata、CRUD、去重和用户画像 schema;Graphiti 补 `v0.30.1` /
+`mcp-v1.1.0` Neo4j custom database routing/search 修复。以上均为官方 product
+behavior 或 release signal,不写成独立 benchmark / superiority claim。
 
 ## 分类标准
 

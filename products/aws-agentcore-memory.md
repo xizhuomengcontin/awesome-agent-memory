@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-08-10
+last_revised: 2026-09-07
 archive: archives/aws-agentcore-memory-overview.md
 ---
 
@@ -58,13 +58,13 @@ record streaming 作为当前能力面:memory record create / update / delete �
 Kinesis,用于下游审计、同步或增量处理。该能力是产品行为证据,可支持"AgentCore Memory
 暴露 evented memory lifecycle"这一判断,但不支持任何独立性能结论。
 
-## 3.3 2026-08 refresh
+## 3.3 2026-09 refresh
 
-2026-08-10 复核 AWS AgentCore release notes 时,官方页面显示 2026-08 的
-"Memory, policy, and harness are now available in AWS GovCloud (US-West)"。
-这说明 AgentCore Memory 的短期 / 长期记忆能力已经扩展到 `us-gov-west-1` 这种
-合规区域。该更新只支持区域覆盖、采购可用性和企业合规部署判断,不支持 memory
-质量、性能或安全性优于其他产品的结论。
+2026-09-07 复核 release notes 时,AWS AgentCore Memory 的 August/September notes
+显示 direct ingestion into long-term memory、flexible namespaces、`CreateEvent`
+JSON payloads,以及 GovCloud (US-West) availability 等能力面。JSON payload up to
+100 KB 可被 semantic、user preference、summarization、episodic strategies 抽取。
+该信息是 AWS 官方 product behavior;不支持独立性能或安全有效性结论。
 
 ## 4. 决策相关性 / Decision relevance
 
