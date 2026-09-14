@@ -1,6 +1,6 @@
 ---
 title: Agent-memory cost-savings landscape
-date: 2026-06-30
+date: 2026-09-14
 status: seed
 language: zh-CN
 ---
@@ -32,7 +32,7 @@ language: zh-CN
 |---|---|---|---|---|
 | Full-history replacement | 输入 token、API cost、长上下文延迟 | [`Mem0 paper`](../papers/mem0-paper.md), [`Fact-based memory vs long-context`](../benchmarks/fact-based-memory-vs-long-context.md), [`ConvoMem`](../benchmarks/convomem.md) | 抽取 facts / user profile / task state,检索后只装配相关片段 | full-context 在部分 recall 任务仍可能更准;break-even 依赖价格和轮数。 |
 | Structured distillation | 长期 profile token、重复事实、上下文膨胀 | [`Structured Distillation`](../papers/stubs/structured-distillation-for-personalized-agent-memory-11.md), DimMem external candidate, TencentDB L0-L3 分层 | 把长交互压成 structured memory,再按 scope/context 召回 | 容易丢 provenance、冲突和少数长尾事实;需要审计轨迹。 |
-| Budgeted retrieval / tier routing | 每次 query 的检索、rerank、LLM reasoning 成本 | [`BudgetMem`](../papers/stubs/budgetmem-learning-query-aware-budget-tier-routing-for.md), [`A2RAG`](../papers/stubs/a2rag-adaptive-agentic-graph-retrieval-for-cost-aware-and.md), [`LightMem`](../papers/lightmem-agent-memory.md) | 轻量 tier 先答简单查询,困难查询再升级到 graph / agentic retrieval / larger model | router 训练、难例识别和 fallback 失败会把质量风险藏起来。 |
+| Budgeted retrieval / tier routing | 每次 query 的检索、rerank、LLM reasoning 成本 | [`BudgetMem`](../papers/stubs/budgetmem-learning-query-aware-budget-tier-routing-for.md), [`A2RAG`](../papers/stubs/a2rag-adaptive-agentic-graph-retrieval-for-cost-aware-and.md), [`LightMem`](../papers/lightmem-agent-memory.md), [`Router-Mem`](../papers/router-mem-progressive-execution.md), [`LeanMem`](../papers/leanmem-efficient-long-term-memory.md), [`MemoryCPT`](../papers/memorycpt-cost-performance-memory.md) | 轻量 tier 先答简单查询,困难查询再升级到 graph / agentic retrieval / larger model | router 训练、难例识别和 fallback 失败会把质量风险藏起来。 |
 | Offline / SLM consolidation | 热路径大模型调用、在线延迟 | [`LightMem`](../papers/lightmem-agent-memory.md), [`Agent Memory systems`](../papers/agent-memory-systems-characterization.md) | 用 small language model 或离线 worker 做写入、整理、consolidation | freshness、错误累积和小模型质量要被持续测量。 |
 | Phase-aware systems profiling | 选型时的隐藏成本 | [`Agent Memory systems`](../papers/agent-memory-systems-characterization.md), [`MEMAUDIT`](../papers/stubs/memaudit-an-exact-package-oracle-evaluation-protocol-for.md) | 把 construction / retrieval / generation / write budget 分账 | 画像必须用真实 query volume、更新频率和 tenant pattern 重跑。 |
 | Productized context offloading | coding-agent 长任务上下文、人工整理成本 | [`OpenViking`](../products/openviking.md), [`TencentDB Agent Memory`](../products/tencentdb-agent-memory.md), [`Mem0`](../products/mem0.md), Searchat external implementation | context DB、memory API server、分层 artifact、agent/tool 接入 | 大多是产品或关联方数字,要继续标注为 vendor self-report。 |
@@ -62,7 +62,21 @@ language: zh-CN
 | [`Fact-based memory vs long-context`](../benchmarks/fact-based-memory-vs-long-context.md) | candidate benchmark note | 直接比较 fact-based memory 和 long-context inference 的 accuracy、cumulative API cost、break-even turns。 | stub-quality source note;pricing assumptions time-sensitive。 |
 | [`ConvoMem`](../benchmarks/convomem.md) | full benchmark note | 提供 1k-3M token 可调 context 下的 accuracy/cost/latency crossover 视角。 | synthetic data;不要把"前 150 个 conversations 不需要 RAG"泛化到所有产品。 |
 | [`LightMem agent memory`](../papers/lightmem-agent-memory.md) | seed paper note | 用 SLM 负责 retrieval、writing、offline consolidation,强调 bounded online cost 和低延迟路径。 | seed 质量;需补 PDF/code/license 细读。 |
+| [`Compact-Memory LLM Agents`](../papers/compact-memory-llm-agents.md) | seed paper note | 用 online max-member clustering + atom-aware packing 面向 2k-5k prompt budget 压缩 agent memory context。 | seed 质量;author-reported evidence,需补 full setup/code/license 细读。 |
 | [`Agent Memory systems characterization`](../papers/agent-memory-systems-characterization.md) | seed paper note | 把 memory construction、retrieval、generation 作为系统成本画像对象。 | seed 质量;尚未复核 profiling harness 细节。 |
+| [`Router-Mem`](../papers/router-mem-progressive-execution.md) | seed paper note | 用 evidence sufficiency router 在低成本 retrieved evidence 和 deeper memory execution 之间切换。 | seed 质量;作者报告的 latency / score 需要 full read 与 artifact review。 |
+| [`LeanMem`](../papers/leanmem-efficient-long-term-memory.md) | seed paper note | 按 profile/event/source-grounded memory 分流存储和 query-specific retrieval budget。 | seed 质量;作者报告的成本 / latency / accuracy 需要 full read。 |
+| [`MemoryCPT`](../papers/memorycpt-cost-performance-memory.md) | seed paper note | 用 Query-agnostic Distillation + Query-aware Retrieval/Summarization 优化 Quality per Cost。 | seed 质量;QPC、训练成本和 artifact 需复核。 |
+
+### 2026-08 current-source additions
+
+| Item | Current repo status | Cost-saving relevance | Evidence boundary |
+|---|---|---|---|
+| [`ContextPilot`](../papers/contextpilot-proactive-context-management.md) | seed paper note | Proactive context management combines planning, long-term memory, and soft offloading for long-horizon tasks. | seed quality;reported gains and code path need full read. |
+| [`EARM`](../papers/earm-experience-amortized-reranking.md) | seed paper note | Reuses query-memory relevance scores through matrix completion to reduce repeated LLM reranking. | seed quality;cost/quality trade-off and cache invalidation need extraction. |
+| [`KOPE`](../papers/kope-experience-graph-memory.md) | seed paper note | Experience graph memory for kernel optimization claims lower search effort and better reuse of past optimization attempts. | seed quality;domain-specific and not direct conversational memory evidence. |
+| [`CaSKG`](../papers/caskg-skill-graph-retrieval.md) | seed paper note | Skill-graph retrieval can constrain multi-agent communication/search overhead. | seed quality;skill graph construction cost and task coverage need full read. |
+| [`GraphMemix`](../papers/graphmemix-evidence-forests.md) | seed paper note | Evidence forests suggest a bounded graph-memory alternative for retrieval and reasoning over multimodal evidence. | seed quality;claims remain paper-origin until normalized. |
 
 ### Candidate papers and code paths to upgrade
 
@@ -70,6 +84,7 @@ language: zh-CN
 |---|---|---|---|---|
 | BudgetMem | [`stub`](../papers/stubs/budgetmem-learning-query-aware-budget-tier-routing-for.md) | <https://arxiv.org/abs/2602.06025> and <https://github.com/ViktorAxelsen/BudgetMem> | query-aware budget-tier routing:按查询难度选择不同 memory processing tier。 | 升级为 full note;记录 code license、router training、LoCoMo/LongMemEval/HotpotQA 设置。 |
 | Structured Distillation for Personalized Agent Memory | [`stub`](../papers/stubs/structured-distillation-for-personalized-agent-memory-11.md) | <https://arxiv.org/abs/2603.13017> and <https://github.com/Process-Point-Technologies-Corporation/searchat> | 论文声称 11x token reduction with retrieval preservation,并有 Searchat 代码实现。 | 复核 compression ratio、MRR 设置、是否保存 provenance/conflict。 |
+| MemForest | [`seed`](../papers/memforest-eventtree-agent-memory.md) | <https://arxiv.org/abs/2609.08273> and <https://github.com/Celina-love-sweet/MemForest> | EventTree partitioning and progressive merging target memory compression, retrieval work, and context cost. | Full-read merge reversibility, provenance retention, quality-cost setup, and license before promotion. |
 | MEMAUDIT | [`stub`](../papers/stubs/memaudit-an-exact-package-oracle-evaluation-protocol-for.md) | <https://arxiv.org/abs/2605.02199> | budgeted long-term memory writing 的 evaluator,可约束"省空间但不乱写"。 | 升级 benchmark/evaluator note;明确 package oracle 和 storage budget。 |
 | A2RAG | [`stub`](../papers/stubs/a2rag-adaptive-agentic-graph-retrieval-for-cost-aware-and.md) | <https://arxiv.org/abs/2601.21162> | cost-aware adaptive Graph-RAG,只在需要时触发更贵的 graph/verification 路径。 | 判断是否属于 agent memory core 还是 Graph-RAG 相邻方法。 |
 | DimMem | external candidate | <https://arxiv.org/abs/2605.15759>, <https://github.com/ChowRunFa/DimMem> | dimensional structuring + Qwen3-4B extractor,报告 LoCoMo per-query token cost reduction。 | 新建 paper stub/full note 前要避开旧 radar 中错误 DimMem arXiv ID。 |

@@ -19,6 +19,24 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-09-07 manual radar additions
+
+These entries were added by the 2026-09-07 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [Agent Zero Memory: Provenance-Aware Long-Term Memory for LLM Agents](agent-zero-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.29606)
+- [UTILMEM: Benchmarking Evidence Utilization in Long-Term Conversational Memory](../benchmarks/utilmem.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.30508)
+- [Agent Memory Is a Surface for Endogenous Authorization Laundering](agent-memory-authorization-laundering.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.01836)
+- [EAL-Bench: Endogenous Authorization Laundering](../benchmarks/eal-bench.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.01836)
+- [Making Prospective Memory SLM-Shaped: Typed Intention Stores for Small-Model Agents](prospective-memory-slm-shaped.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.01272)
+- [CAPTURE: Disentangling Preference Drift from Memory Poisoning in Personalized LLM Agents](capture-preference-drift-memory-poisoning.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.02265)
+- [SkillGLoW: Procedural-Family Skill Consolidation for Self-Improving Agents on Long-Horizon Task Streams](skillglow-procedural-family-skill-consolidation.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.02217)
+- [MemoryLACE: Memory Lifecycle-Aware Consolidation and Evidence Retrieval](memorylace-lifecycle-aware-consolidation.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.03201)
+- [RuleMem: Active Rule Memory for Long-Term Conversational Agents](rulemem-active-rule-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.03915)
+- [ICM-Bench: Person-Level Identity Reasoning in Multimodal Agents with Long-Term Memory](../benchmarks/icm-bench.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.04438)
+- [Compact-Memory LLM Agents via Online Max-Member Clustering and Atom-Aware Packing](compact-memory-llm-agents.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.04915)
+- [Forgetting Without Restarting: Execution-State Unlearning for Stateful LLM Agents](execution-state-unlearning.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.04875)
+
 ## 2026-07 manual radar additions
 
 These entries were added by the 2026-07-06 weekly radar refresh. They are not
@@ -30,6 +48,19 @@ part of the 2026-05-19 nine-list scrape statistics above.
 - [MemDelta: Controlled Baselines and Hidden Confounds in Agent Memory Evaluation](../benchmarks/memdelta.md) — 2026-06 — benchmark seed — [arxiv](https://arxiv.org/abs/2606.29914)
 - [Mandol: An Agglomerative Agent Memory System for Long-Term Conversations](mandol-agglomerative-agent-memory.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.29778)
 - [Forensic Trajectory Signatures for Agent Memory Poisoning Detection](forensic-trajectory-memory-poisoning.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.30566)
+
+## 2026-09-14 manual radar additions
+
+These entries were added by the 2026-09-14 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [LifeFuse-Mem: Lifecycle-Aware State Fusion Against Temporary Overwriting for Long-Term Memory](lifefuse-mem-lifecycle-aware-state-fusion.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.12436)
+- [ROAM: Robust Organization of Atomic Memories for Agents through Semantic Relations](roam-robust-atomic-memory-organization.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.09778)
+- [MemSentry: A Framework for Detecting Persistent Memory Poisoning in Agentic AI](memsentry-persistent-memory-poisoning.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.08747)
+- [MemForest: Efficient Agent Memory Management via EventTree Partitioning and Progressive Merging](memforest-eventtree-agent-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.08273) / [code](https://github.com/Celina-love-sweet/MemForest)
+- [AIM: A Privacy-Aware Interoperable Memory Framework for Multi-Agent Multi-User LLM Systems](aim-privacy-aware-interoperable-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.12320)
+- [MUMBench](../benchmarks/mumbench.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.12320)
+- [MERIT](../benchmarks/merit.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.05441)
 
 ## 2026-06 manual radar additions
 
