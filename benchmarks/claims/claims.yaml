@@ -703,63 +703,43 @@ events:
       - benchmarks/memprobe.md
       - https://arxiv.org/abs/2606.24595
     extract_confidence: medium
-  - event_id: eal-bench-origin-2026
-    benchmark_id: eal-bench
+  - event_id: mumbench-origin-2026
+    benchmark_id: mumbench
     source_kind: paper
-    source_id: benchmarks/eal-bench.md
+    source_id: benchmarks/mumbench.md
     source_date: 2026-09
-    actor: EAL-Bench authors
+    actor: AIM authors
     actor_type: paper_authors
     usage_type: originates_benchmark
     claim_direction: methodological_only
     compared_systems: []
     reported_metrics: []
-    experimental_setup: "Benchmark for authorization-state fidelity and downstream unauthorized-action risk in persistent agent memory; local note is seed quality."
+    experimental_setup: "Multi-user interactions across four domains; retrieval, creation, update, and deletion under private/public visibility."
     reproduction_status: not_reproduced
     evidence_level: primary_pdf
     independence_class: survey_only
-    comparability_notes: "Origin protocol only; task definitions, labels, and reported safeguards need full normalization before use."
+    comparability_notes: "Origin protocol only; paper-reported AIM metrics are paper-origin claims and resources need normalization."
     evidence_refs:
-      - benchmarks/eal-bench.md
-      - https://arxiv.org/abs/2609.01836
+      - benchmarks/mumbench.md
+      - https://arxiv.org/abs/2609.12320
     extract_confidence: medium
-  - event_id: utilmem-origin-2026
-    benchmark_id: utilmem
+  - event_id: merit-origin-2026
+    benchmark_id: merit
     source_kind: paper
-    source_id: benchmarks/utilmem.md
-    source_date: 2026-08
-    actor: UTILMEM authors
-    actor_type: paper_authors
-    usage_type: originates_benchmark
-    claim_direction: methodological_only
-    compared_systems: []
-    reported_metrics: []
-    experimental_setup: "Diagnostic benchmark for memory utilization across dense histories, implicit evidence, distributed synthesis, and distractor resistance; local note is seed quality."
-    reproduction_status: not_reproduced
-    evidence_level: primary_pdf
-    independence_class: survey_only
-    comparability_notes: "Origin protocol only; code/data license, judge setup, and system-comparison results need full normalization before use."
-    evidence_refs:
-      - benchmarks/utilmem.md
-      - https://arxiv.org/abs/2608.30508
-    extract_confidence: medium
-  - event_id: icm-bench-origin-2026
-    benchmark_id: icm-bench
-    source_kind: paper
-    source_id: benchmarks/icm-bench.md
+    source_id: benchmarks/merit.md
     source_date: 2026-09
-    actor: ICM-Bench authors
+    actor: MERIT authors
     actor_type: paper_authors
     usage_type: originates_benchmark
     claim_direction: methodological_only
     compared_systems: []
     reported_metrics: []
-    experimental_setup: "Identity-centric long-video memory benchmark for multimodal agents; local note is seed quality."
+    experimental_setup: "Instrumented episodic tool-use tasks with leak checks, updated-fact recall, corruption controls, and token/dollar metering."
     reproduction_status: not_reproduced
     evidence_level: primary_pdf
     independence_class: survey_only
-    comparability_notes: "Origin protocol only; synthetic-video generation, judge setup, and released artifacts need full normalization before use."
+    comparability_notes: "Origin protocol only; reported pilot/grid results are paper-origin and release artifacts need verification."
     evidence_refs:
-      - benchmarks/icm-bench.md
-      - https://arxiv.org/abs/2609.04438
+      - benchmarks/merit.md
+      - https://arxiv.org/abs/2609.05441
     extract_confidence: medium

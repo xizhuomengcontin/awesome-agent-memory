@@ -1,6 +1,6 @@
 ---
 title: Product discovery log — agent memory products
-date: 2026-06-24
+date: 2026-09-14
 status: working-log
 language: zh-CN
 ---
@@ -157,13 +157,12 @@ language: zh-CN
 | update-existing | Redis Agent Memory Server | Redis blog 2026-07-01 | 更新 `products/redis-agent-memory-server.md`;作为产品定位/实现建议,非 benchmark |
 | watchlist | Cloudflare Think harness | Cloudflare docs | 暂不拆产品;与 Cloudflare Agent Memory 有重叠,先观察是否形成独立 memory product |
 
-## 11. 2026-09-07 weekly refresh delta
+## 11. 2026-09-14 weekly refresh delta
 
 | Decision | Item | Source | Action |
 |---|---|---|---|
-| update-existing | AWS AgentCore Memory | official AgentCore release notes | 更新 `products/aws-agentcore-memory.md`;direct LTM ingestion、flexible namespaces、JSON payload 和 GovCloud availability 都按 product behavior 处理 |
-| update-existing | Alibaba Bailian Memory Library | official long-term memory API docs | 更新 `products/alibaba-bailian-memory.md`;商业化计费、Pro/Lite 检索、metadata、CRUD、去重和用户画像 schema 是 product/pricing signal |
-| update-existing | Graphiti | upstream GitHub releases | 更新 `products/graphiti.md`;Neo4j custom database routing/search fix 影响 self-hosted tenant correctness |
-| watchlist | Cloudflare Think harness | official Cloudflare docs / discovery signal | 与 Cloudflare Agent Memory 重叠,本轮不拆独立产品笔记 |
-| watchlist | Mnemosyne / Exocortex / inite / ZenBrain | GitHub/product discovery only | 保留为下一轮产品 discovery 候选;未达到本轮 primary-source deep-note 门槛 |
-| update-deferred | Claude / TencentDB Agent Memory / Mem0 / Google / Microsoft / OpenAI / Redis / Letta | open PR overlap or no stronger new source delta | 避免重复 PR #16-#20 和 #22 中的 July/August 条目;本轮只记录未重叠的 9 月官方变化 |
+| update-existing | Graphiti | official GitHub release `v0.30.2` | 更新 `products/graphiti.md` 与 archive;记录 Neo4j database routing、group-ID clear、并发隔离和 FalkorDB full-text 修复 |
+| update-existing | memsearch | official GitHub release `v0.4.20` | 更新 `products/memsearch.md` 与 archive;记录 context-budget retention、recall status、summary failure、Milvus Lite 和 Windows 修复 |
+| watchlist | MemOS `v2.0.19` | official GitHub release | 只记录为 release-health signal;本轮没有足够 memory-specific behavior 证据升级产品笔记 |
+| watchlist | CreaMem / SafeMem / graph-based personalized memory | arXiv discovery | 保留观察;分别存在场景化、embodied 或 survey/overlap 边界,不重复入 core notes |
+| adjacent | BIO-MEMART / KVShareArena | arXiv discovery | 保持在 prompt/KV-cache 或 adjacent lane,不计入 durable agent-memory core |

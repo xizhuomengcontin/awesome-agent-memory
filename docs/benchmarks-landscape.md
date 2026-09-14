@@ -1,6 +1,6 @@
 ---
 title: Benchmarks landscape — agent memory evaluation by capability and evidence
-date: 2026-06-24
+date: 2026-09-14
 status: seed
 language: zh-CN
 ---
@@ -35,9 +35,8 @@ language: zh-CN
 | memory-induced sycophancy | [`MemSyco-Bench`](../benchmarks/memsyco-bench.md) | whether retrieved memory should influence factual reasoning, conflicts, updates, and personalization | seed,origin paper logged; results/resources not normalized |
 | multimodal deletion leakage | [`MemLeak`](../benchmarks/memleak.md) | residual recovery after deletion via correlated text and retained images | seed,origin paper logged; image/data/setup not normalized |
 | baseline-control methodology | [`MemDelta`](../benchmarks/memdelta.md) | component-controlled memory-vs-RAG/full-context evaluation and write-path cost discipline | seed,methodology event logged; not an end-agent leaderboard |
-| authorization-bearing memory | [`EAL-Bench`](../benchmarks/eal-bench.md) | authorization-state fidelity / revocation tracking / downstream unauthorized-action risk | seed,origin paper logged; task setup and safeguards not normalized |
-| evidence utilization | [`UTILMEM`](../benchmarks/utilmem.md) | distributed evidence integration / implicit relevance / distractor resistance / task-oriented synthesis | seed,origin paper logged; code/data/license not normalized |
-| multimodal identity memory | [`ICM-Bench`](../benchmarks/icm-bench.md) | recurring person identity / cross-time relations / multimodal evidence binding | seed,origin paper logged; generation pipeline and released artifacts not normalized |
+| multi-user memory governance | [`MUMBench`](../benchmarks/mumbench.md) | private/shared visibility plus retrieval, creation, update, and deletion | seed,origin protocol only; paper-origin metrics |
+| tool-use memory utility and cost | [`MERIT`](../benchmarks/merit.md) | downstream task success, updated-fact recall, leakage, corruption, and token/dollar cost | seed,origin protocol only; release artifacts unchecked |
 
 ## B. 初始交叉统计
 
@@ -64,9 +63,8 @@ language: zh-CN
 | MemSyco-Bench | 1 | origin paper logged; memory-induced sycophancy protocol not yet normalized |
 | MemLeak | 1 | origin paper logged; multimodal deletion-leakage protocol not yet normalized |
 | MemDelta | 1 | methodology event logged; use for claims discipline, not direct benchmark ranking |
-| EAL-Bench | 1 | origin paper logged; authorization laundering protocol not yet normalized |
-| UTILMEM | 1 | origin paper logged; evidence-utilization protocol not yet normalized |
-| ICM-Bench | 1 | origin paper logged; identity-centric multimodal memory protocol not yet normalized |
+| MUMBench | 1 | origin protocol logged; paper-reported operation metrics not normalized |
+| MERIT | 1 | origin protocol logged; paper-reported utility/cost results not normalized |
 
 ### B2. Evaluation uses / baseline comparisons
 
@@ -112,9 +110,8 @@ language: zh-CN
 | MemoryAgentBench | 1 | Survey mention only |
 | DynamicMem | 0 | Origin protocol only |
 | MEMPROBE | 0 | Origin protocol only |
-| EAL-Bench | 0 | Origin protocol only |
-| UTILMEM | 0 | Origin protocol only |
-| ICM-Bench | 0 | Origin protocol only |
+| MUMBench | 0 | Origin protocol only; no outside reuse logged |
+| MERIT | 0 | Origin protocol only; no outside reuse logged |
 
 ### B7. Independent or methodological pressure
 
@@ -123,9 +120,6 @@ language: zh-CN
 | LongMemEval | ConvoMem critique | sample-size and filler-source critique, not a rerun |
 | LoCoMo | ConvoMem critique | small-conversation-count critique, not a rerun |
 | ConvoMem | own baseline comparison | strong protocol for cost/accuracy crossover, but synthetic data and Mem0-only RAG baseline caveat |
-| EAL-Bench | own origin protocol | action-grounded authorization safety pressure, not a rerun |
-| UTILMEM | own origin protocol | separates retrieved evidence access from downstream evidence integration |
-| ICM-Bench | own origin protocol | extends persona memory pressure into multimodal identity binding |
 
 ## C. What Counts As Evidence
 
@@ -172,13 +166,11 @@ enters the catalog.
    becomes a kernel evaluation priority.
 9. Upgrade GateMem if shared-memory governance or enterprise scoped recall becomes
    a kernel priority.
-10. Upgrade EAL-Bench if authorization-bearing memory or enterprise action
-    safety becomes a kernel priority.
-11. Upgrade UTILMEM if evidence integration under memory pressure becomes a
-    retrieval-quality priority.
-12. Upgrade ICM-Bench if multimodal identity memory becomes a product or
-    companion-agent evaluation priority.
-13. Add independent reproduction rows only when the source gives enough setup
+10. Upgrade MUMBench if multi-user visibility, revocation, or scoped CRUD becomes
+   a kernel priority.
+11. Upgrade MERIT if tool-use memory utility and cost accounting become a kernel
+   evaluation priority.
+12. Add independent reproduction rows only when the source gives enough setup
    detail to distinguish reruns from marketing summaries.
 
 ## F. Maintenance Contract

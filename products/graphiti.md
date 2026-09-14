@@ -12,7 +12,7 @@ memory_modules:
   - parser-chunker
   - memorydiff-generator
 status: full
-last_revised: 2026-09-07
+last_revised: 2026-09-14
 archive: archives/graphiti-overview.md
 ---
 
@@ -52,13 +52,14 @@ FalkorDB 1.1.2+,Kuzu 0.11.2+,Amazon Neptune(配合 OpenSearch Serverless)。
 - **provenance**:每条 derived fact 可回溯到生成它的 episode
 - **LLM provider**:支持 OpenAI / Anthropic / Groq 等,通过 extras 装
 
-## 3.1 2026-09 refresh
+### 3.2 2026-09 refresh
 
-2026-09-07 复核 upstream release 时,Graphiti `v0.30.1` / `mcp-v1.1.0`
-release 记录 Neo4j custom database routing/search 修复:查询和搜索现在尊重配置的
-database,并支持 per-call override。这个变化不改变 Graphiti 的 memory model,但对
-self-hosted temporal KG memory 的 tenant isolation、migration 和 correctness caveat
-有实际影响。
+The official `v0.30.2` release updates graphiti-core and adds FalkorDB and
+Neo4j integration fixes. It honors `NEO4J_DATABASE` in MCP, adds Saga nodes when
+clearing by group IDs, uses request-scoped drivers for concurrent multi-group
+isolation, and avoids a full Entity scan during FalkorDB edge full-text search.
+These are upstream release signals about product behavior and correctness, not
+independent quality or performance evidence.
 
 ## 4. 决策相关性 / Decision relevance
 
