@@ -59,8 +59,8 @@ separate buckets.
 | Paper stubs | 988 stubs | [`papers/stubs/`](papers/stubs/) | Track papers that are covered but not yet fully read. |
 | Local PDFs | 534 files | [`papers/pdfs/`](papers/pdfs/) | Re-read sources and audit paper notes. |
 | Full / seed paper notes | 7 full + 73 seed | [`papers/`](papers/) | Use human-read notes for architectural decisions. |
-| Memory product notes | 38 notes | [`products/`](products/) | Compare memory layers, memory SDKs, managed memory, and memory-enabled agents. |
-| Product page archives | 37 snapshots | [`products/archives/`](products/archives/) | Audit product claims after source pages change. |
+| Memory product notes | 40 notes | [`products/`](products/) | Compare memory layers, memory SDKs, managed memory, and memory-enabled agents. |
+| Product page archives | 39 snapshots | [`products/archives/`](products/archives/) | Audit product claims after source pages change. |
 | Benchmark catalog | 23 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
 | Claims ledger | Structured YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | Separate vendor claims, paper evaluations, critiques, and reproductions. |
 | Cost-savings lane | Seed landscape | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | Find agent-memory papers, methods, code paths, and products that reduce token, latency, or runtime cost. |
@@ -169,8 +169,8 @@ flowchart LR
 
 | Path | Purpose |
 |---|---|
-| [`products/`](products/) | 38 memory product notes, including Mem0, Letta, Zep, Graphiti, EverOS, MemOS, Redis Agent Memory Server, Supermemory, TencentDB Agent Memory, agentmemory, Memori, memU, memsearch, and platform-managed memory offerings. |
-| [`products/archives/`](products/archives/) | 37 markdown snapshots of canonical memory product pages. |
+| [`products/`](products/) | 40 memory product notes, including Mem0, Letta, Zep, Graphiti, EverOS, MemOS, Redis Agent Memory Server, Supermemory, TencentDB Agent Memory, agentmemory, Memori, memU, memsearch, and platform-managed memory offerings. |
+| [`products/archives/`](products/archives/) | 39 markdown snapshots of canonical memory product pages. |
 | [`docs/products-landscape.md`](docs/products-landscape.md) | Product landscape by domain and audience. |
 | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) | Multi-agent product discovery log with Tier A, Tier B, reject, and alias decisions. |
 | [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) | Cross-product architecture patterns: memory OS, graph/temporal memory, MCP/local-first memory, managed cloud memory, and personal memory. |
