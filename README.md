@@ -85,6 +85,7 @@ Start with the path that matches your question:
 | See Ymem-specific bindings | [`docs/ymem-binding/README.md`](docs/ymem-binding/README.md) |
 
 ### Use It With The Repo-Local Skill
+- [Continuum-AI-Corp/OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay) — record & replay AI coding-agent runs offline.
 
 Users of skill-enabled agent tools can also invoke the repo-local skill
 `$awesome-agent-memory` to use this repository as an evidence-backed review tool.
